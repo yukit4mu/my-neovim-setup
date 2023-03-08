@@ -15,5 +15,5 @@ You can choice favorite Branch(if you want to use)👐
 
 `$ git clone git@github.com:Nyowa450/nvim.git`
 
-**This is my PERSONAL NEOVIM CONFIGS.**
+**This is my PERSONAL NEOVIM CONFIGS.**  
 **If you use this Configs (especially in practice), BE CAREFUL.🚨**
