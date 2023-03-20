@@ -23,6 +23,14 @@ packer.startup(function(use)
   use 'sainnhe/everforest'
   use 'folke/lsp-colors.nvim'
 
+  -- dashboard
+  use {
+      'goolord/alpha-nvim',
+      requires = { 'nvim-tree/nvim-web-devicons' },
+      config = function ()
+          require'alpha'.setup(require'alpha.themes.startify'.config)
+      end
+  }
   -- coc.nvim
   use {'neoclide/coc.nvim', branch = 'release'}
 
@@ -30,8 +38,9 @@ packer.startup(function(use)
   use 'nvim-lualine/lualine.nvim'
 
   -- Buffer Control
-  use 'zefei/vim-wintabs'
-  use 'zefei/vim-wintabs-powerline'
+  -- use 'zefei/vim-wintabs'
+  -- use 'zefei/vim-wintabs-powerline'
+  use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 
   -- Fern.vim
   use 'lambdalisue/fern.vim'
