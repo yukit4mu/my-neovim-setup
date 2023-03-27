@@ -120,11 +120,6 @@ _G.packer_plugins = {
     path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/fern.vim",
     url = "https://github.com/lambdalisue/fern.vim"
   },
-  ["git.nvim"] = {
-    loaded = true,
-    path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/git.nvim",
-    url = "https://github.com/dinhhuy258/git.nvim"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -234,6 +229,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-prettier"] = {
     loaded = true,

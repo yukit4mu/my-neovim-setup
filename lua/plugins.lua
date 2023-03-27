@@ -84,7 +84,8 @@ packer.startup(function(use)
   use 'prettier/vim-prettier'
 
   -- Git Integration
-  use 'dinhhuy258/git.nvim'
+  -- use 'dinhhuy258/git.nvim'
+  use 'tpope/vim-fugitive'
   use 'lewis6991/gitsigns.nvim'
 
 end)

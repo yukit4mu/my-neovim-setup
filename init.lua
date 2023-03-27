@@ -1,4 +1,9 @@
 require('base')
 require('plugins')
 
-vim.cmd[[autocmd BufWritePost plugins.lua PackerCompile]]
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  augroup end
+]])
