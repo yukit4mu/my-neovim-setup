@@ -1,9 +1,7 @@
 vim.cmd([[
-let g:fern#renderer = "nerdfont"
-
+let g:fern#renderer = "nvim-web-devicons"
 let g:fern#default_hidden=1
 
-nnoremap <silent><C-n> :Fern . -reveal=%<CR>
 
 augroup my-glyph-palette
   autocmd! *
@@ -20,3 +18,5 @@ augroup fern-settings
   autocmd FileType fern call s:fern_settings()
 augroup END
 ]])
+
+vim.keymap.set('n','<C-n>',':Fern . -reveal=%<CR>',{silent = true,noremap = true})

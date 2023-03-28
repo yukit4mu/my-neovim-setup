@@ -17,13 +17,12 @@ telescope.setup({
   extensions = {
     coc = {
       prefer_locations = false,   -- always use Telescope locations to preview definitions/declarations/implementations etc
-    }
+    },
   },
 })
 
 telescope.load_extension("frecency") --frecency search
 telescope.load_extension("coc")      -- coc integration
-
 
 -- file search
 vim.keymap.set('n', '<leader>f',
