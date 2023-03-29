@@ -110,10 +110,10 @@ _G.packer_plugins = {
     path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/everforest",
     url = "https://github.com/sainnhe/everforest"
   },
-  ["fern-renderer-web-devicons.nvim"] = {
+  ["fern-renderer-nerdfont.vim"] = {
     loaded = true,
-    path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/fern-renderer-web-devicons.nvim",
-    url = "https://github.com/TheLeoP/fern-renderer-web-devicons.nvim"
+    path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/fern-renderer-nerdfont.vim",
+    url = "https://github.com/lambdalisue/fern-renderer-nerdfont.vim"
   },
   ["fern.vim"] = {
     loaded = true,
@@ -149,6 +149,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/neovim",
     url = "https://github.com/rose-pine/neovim"
+  },
+  ["nerdfont.vim"] = {
+    loaded = true,
+    path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/nerdfont.vim",
+    url = "https://github.com/lambdalisue/nerdfont.vim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
