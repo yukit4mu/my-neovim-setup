@@ -43,11 +43,14 @@ packer.startup(function(use)
   use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 
   -- Fern.vim
-  use 'lambdalisue/fern.vim'
-  use 'lambdalisue/fern-renderer-nerdfont.vim'
-  use 'lambdalisue/nerdfont.vim'
-  use 'lambdalisue/glyph-palette.vim'
+  -- use 'lambdalisue/fern.vim'
+  -- use 'lambdalisue/fern-renderer-nerdfont.vim'
+  -- use 'lambdalisue/nerdfont.vim'
+  -- use 'lambdalisue/glyph-palette.vim'
   -- use 'TheLeoP/fern-renderer-web-devicons.nvim'
+
+  use 'obaland/vfiler.vim'
+  use 'obaland/vfiler-column-devicons'
 
   use 'kyazdani42/nvim-web-devicons'
 
@@ -63,11 +66,6 @@ packer.startup(function(use)
   use {
     "nvim-telescope/telescope-frecency.nvim",
     requires = {"kkharji/sqlite.lua"}
-  }
-  -- Filer
-  use {
-      "nvim-telescope/telescope-file-browser.nvim",
-      requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
   }
   use 'fannheyward/telescope-coc.nvim'
 

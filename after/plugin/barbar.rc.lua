@@ -6,7 +6,12 @@
 -- ]])
 
 -- Set barbar's options
-require'bufferline'.setup {
+vim.g.barbar_auto_setup = false -- disable auto-setup
+require'barbar'.setup {
+  -- WARN: do not copy everything below into your config!
+  --       It is just an example of what configuration options there are.
+  --       The defaults are suitable for most people.
+
   -- Enable/disable animations
   animation = false,
 
@@ -16,32 +21,18 @@ require'bufferline'.setup {
   -- Enable/disable current/total tabpages indicator (top right corner)
   tabpages = true,
 
-  -- Enable/disable close button
-  closable = true,
-
   -- Enables/disable clickable tabs
   --  - left-click: go to buffer
   --  - middle-click: delete buffer
   clickable = true,
 
-  -- Enables / disables diagnostic symbols
-  diagnostics = {
-    -- you can use a list
-    {enabled = false, icon = 'ﬀ'}, -- ERROR
-    {enabled = false}, -- WARN
-    {enabled = false}, -- INFO
-    {enabled = false},  -- HINT
-
-    -- OR `vim.diagnostic.severity`
-    [vim.diagnostic.severity.ERROR] = {enabled = false, icon = 'ﬀ'},
-    [vim.diagnostic.severity.WARN] = {enabled = false},
-    [vim.diagnostic.severity.INFO] = {enabled = false},
-    [vim.diagnostic.severity.HINT] = {enabled = falsej},
-  },
-
   -- Excludes buffers from the tabline
   exclude_ft = {},
   exclude_name = {},
+
+  -- A buffer to this direction will be focused (if it exists) when closing the current buffer.
+  -- Valid options are 'left' (the default) and 'right'
+  focus_on_close = 'left',
 
   -- Hide inactive buffers and file extensions. Other options are `alternate`, `current`, and `visible`.
   hide = {extensions = false, inactive = false},
@@ -55,23 +46,40 @@ require'bufferline'.setup {
   -- Enable highlighting visible buffers
   highlight_visible = true,
 
-  -- Enable/disable icons
-  -- if set to 'numbers', will show buffer index in the tabline
-  -- if set to 'both', will show buffer index and icons in the tabline
-  icons = true,
+  icons = {
+    -- Configure the base icons on the bufferline.
+    buffer_index = false,
+    buffer_number = false,
+    button = '',
+    -- Enables / disables diagnostic symbols
+    diagnostics = {
+      [vim.diagnostic.severity.ERROR] = {enabled = false, icon = 'ﬀ'},
+      [vim.diagnostic.severity.WARN] = {enabled = false},
+      [vim.diagnostic.severity.INFO] = {enabled = false},
+      [vim.diagnostic.severity.HINT] = {enabled = false},
+    },
+    filetype = {
+      -- Sets the icon's highlight group.
+      -- If false, will use nvim-web-devicons colors
+      custom_colors = false,
 
-  -- If set, the icon color will follow its corresponding buffer
-  -- highlight group. By default, the Buffer*Icon group is linked to the
-  -- Buffer* group (see Highlighting below). Otherwise, it will take its
-  -- default value as defined by devicons.
-  icon_custom_colors = false,
+      -- Requires `nvim-web-devicons` if `true`
+      enabled = true,
+    },
+    separator = {left = '▎', right = ''},
 
-  -- Configure icons on the bufferline.
-  icon_separator_active = '▎',
-  icon_separator_inactive = '▎',
-  icon_close_tab = '',
-  icon_close_tab_modified = '●',
-  icon_pinned = '車',
+    -- Configure the icons on the bufferline when modified or pinned.
+    -- Supports all the base icon options.
+    modified = {button = '●'},
+    pinned = {button = '車', filename = true, separator = {right = ''}},
+
+    -- Configure the icons on the bufferline based on the visibility of a buffer.
+    -- Supports all the base icon options, plus `modified` and `pinned`.
+    alternate = {filetype = {enabled = false}},
+    current = {buffer_index = false},
+    inactive = {button = '×'},
+    visible = {modified = {buffer_number = false}},
+  },
 
   -- If true, new buffers will be inserted at the start/end of the list.
   -- Default is to insert after current buffer.
@@ -93,8 +101,10 @@ require'bufferline'.setup {
   -- usability (see order below)
   semantic_letters = true,
 
+  -- Set the filetypes which barbar will offset itself for
+
   -- New buffer letters are assigned in this order. This order is
-  -- optimal for the qwerty keyboard layout but might need adjustement
+  -- optimal for the qwerty keyboard layout but might need adjustment
   -- for other layouts.
   letters = 'asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERUTYQP',
 
@@ -111,3 +121,4 @@ map('n', '<C-j>', '<Cmd>BufferPrevious<CR>', opts)
 map('n', '<C-k>', '<Cmd>BufferNext<CR>', opts)
 -- Close buffer
 map('n', '<leader>e', '<Cmd>BufferClose<CR>', opts)
+map('n', '<leader>w', '<Cmd>BufferCloseAllButCurrent<CR>', opts)

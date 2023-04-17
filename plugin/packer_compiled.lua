@@ -235,6 +235,16 @@ _G.packer_plugins = {
     path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vfiler-column-devicons"] = {
+    loaded = true,
+    path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/vfiler-column-devicons",
+    url = "https://github.com/obaland/vfiler-column-devicons"
+  },
+  ["vfiler.vim"] = {
+    loaded = true,
+    path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/vfiler.vim",
+    url = "https://github.com/obaland/vfiler.vim"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/vim-fugitive",
