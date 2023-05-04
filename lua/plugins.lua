@@ -21,6 +21,7 @@ packer.startup(function(use)
   use 'ishan9299/nvim-solarized-lua'
   use 'rose-pine/neovim'
   use 'sainnhe/everforest'
+  use 'AlexvZyl/nordic.nvim'
   use 'folke/lsp-colors.nvim'
 
   -- dashboard
@@ -38,9 +39,9 @@ packer.startup(function(use)
   use 'nvim-lualine/lualine.nvim'
 
   -- Buffer Control
-  -- use 'zefei/vim-wintabs'
-  -- use 'zefei/vim-wintabs-powerline'
-  use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+  use 'zefei/vim-wintabs'
+  use 'zefei/vim-wintabs-powerline'
+  -- use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 
   -- Fern.vim
   use 'lambdalisue/fern.vim'

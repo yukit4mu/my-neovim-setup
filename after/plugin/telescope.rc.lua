@@ -6,7 +6,7 @@ local builtin = require('telescope.builtin')
 telescope.setup({
   defaults = {
     sorting_strategy = "ascending",
-    winblend = 4,
+    -- winblend = 4, -- everforestを透明にしているためオフにしておく
     layout_strategy = 'vertical',
     layout_config = { height = 0.9 },
     file_ignore_patterns = {
