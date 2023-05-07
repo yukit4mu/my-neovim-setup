@@ -90,6 +90,11 @@ _G.packer_plugins = {
     path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  ["barbar.nvim"] = {
+    loaded = true,
+    path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    url = "https://github.com/romgrk/barbar.nvim"
+  },
   catppuccin = {
     loaded = true,
     path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/catppuccin",
@@ -244,16 +249,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/vim-pug",
     url = "https://github.com/digitaltoad/vim-pug"
-  },
-  ["vim-wintabs"] = {
-    loaded = true,
-    path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/vim-wintabs",
-    url = "https://github.com/zefei/vim-wintabs"
-  },
-  ["vim-wintabs-powerline"] = {
-    loaded = true,
-    path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/vim-wintabs-powerline",
-    url = "https://github.com/zefei/vim-wintabs-powerline"
   },
   ["vimdoc-ja"] = {
     loaded = true,

@@ -39,9 +39,9 @@ packer.startup(function(use)
   use 'nvim-lualine/lualine.nvim'
 
   -- Buffer Control
-  use 'zefei/vim-wintabs'
-  use 'zefei/vim-wintabs-powerline'
-  -- use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+  -- use 'zefei/vim-wintabs'
+  -- use 'zefei/vim-wintabs-powerline'
+  use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 
   -- Fern.vim
   use 'lambdalisue/fern.vim'
