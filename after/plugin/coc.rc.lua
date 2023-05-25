@@ -1,3 +1,4 @@
+
 -- Some servers have issues with backup files, see #649
 vim.opt.writebackup = false
 
@@ -133,3 +134,7 @@ keyset("n", "<leader>nn", ":Format<cr>", { silent = true })
 -- 2023/02/02現在はvim-prettierを使用(vim-prettier.rc.luaを参照)
 
 -- keyset("n","<leader>mm",":<C-u>CocCommand prettier.forceFormatDocument<cr>")
+
+
+-- Daily Use Coc-Extensions
+ vim.g.coc_global_extensions = {'coc-html','coc-emmet','coc-json','coc-css','coc-yaml','coc-yank','coc-vimlsp','coc-tsserver','coc-eslint','coc-rust-analyzer','coc-lua','@yaegassy/coc-tailwindcss3','@yaegassy/coc-astro','coc-clangd'}

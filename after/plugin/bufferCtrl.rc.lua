@@ -1,3 +1,4 @@
+-- for vim-wintabs
 -- vim.cmd([[
 -- nnoremap <silent><leader>w :WintabsOnly<CR>
 -- nnoremap <silent><leader>e :WintabsClose<CR>
@@ -16,7 +17,7 @@ require'barbar'.setup {
   animation = false,
 
   -- Enable/disable auto-hiding the tab bar when there is a single buffer
-  auto_hide = true,
+  auto_hide = true, -- 合わせてshowtabline = 1 に設定しておく
 
   -- Enable/disable current/total tabpages indicator (top right corner)
   tabpages = true,
@@ -121,4 +122,4 @@ map('n', '<C-j>', '<Cmd>BufferPrevious<CR>', opts)
 map('n', '<C-k>', '<Cmd>BufferNext<CR>', opts)
 -- Close buffer
 map('n', '<leader>e', '<Cmd>BufferClose<CR>', opts)
--- map('n', '<leader>w', '<Cmd>BufferCloseAllButCurrent<CR>', opts)
+map('n', '<leader>w', '<Cmd>BufferCloseAllButCurrent<CR>', opts)

@@ -70,10 +70,12 @@ packer.startup(function(use)
   -- Coding Support
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
+
   use 'kevinhwang91/nvim-hlslens'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'numToStr/Comment.nvim'
   use 'norcalli/nvim-colorizer.lua'
+
   use 'simeji/winresizer'
   use({
     "kylechui/nvim-surround",

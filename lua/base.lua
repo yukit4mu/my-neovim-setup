@@ -37,14 +37,18 @@ vim.opt.swapfile = false
 vim.opt.wrap = true
 
 -- float-transparent
-vim.opt.winblend = 5
+-- vim.opt.winblend = 
 -- Python3
 vim.cmd([[
     let g:python3_host_prog = '/usr/bin/python3'
 ]])
 
--- 不可視文字を非表示(colorscheme用)
+-- 不可視文字を表示(colorscheme用)
+vim.cmd([[
+set listchars=tab:»-,nbsp:%,eol:↲
+]])
 vim.opt.list = false
+
 -- Leader Key
 vim.g.mapleader = ','
 

@@ -59,4 +59,4 @@ vim.keymap.set("n", "gy", "<cmd>Telescope coc type_definitions<cr>", { noremap =
 -- diagnostics
 vim.keymap.set("n", "<leader>a", "<cmd>Telescope coc diagnostics<cr>", {noremap = true, silent = true })
 --頻度検索
-vim.keymap.set("n", "<leader>l", "<cmd>telescope.extensions.frecency.frecency()<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>l", "<Cmd>lua require('telescope').extensions.frecency.frecency()<CR>", {noremap = true, silent = true})
