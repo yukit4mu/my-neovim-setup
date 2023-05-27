@@ -1,6 +1,6 @@
 {
   "coc.preferences.extensionUpdateCheck":"weekly",
-  "suggest.autoTrigger": "trigger",
+  "suggest.autoTrigger": "always",
   "suggest.minTriggerInputLength":3,
   "suggest.noselect":true,
   "suggest.floatConfig":{"border":false,"rounded":false,"winblend": 3},

@@ -45,10 +45,11 @@ packer.startup(function(use)
 
   -- Fern.vim
   use 'lambdalisue/fern.vim'
-  -- use 'lambdalisue/nerdfont.vim'
-  -- use 'lambdalisue/fern-renderer-nerdfont.vim'
+  use 'lambdalisue/nerdfont.vim'
+  use 'lambdalisue/fern-renderer-nerdfont.vim'
   use 'lambdalisue/glyph-palette.vim'
-  use 'TheLeoP/fern-renderer-web-devicons.nvim'
+  -- use 'TheLeoP/fern-renderer-web-devicons.nvim' -- こっちでレンダリングするとiconと文字の空白が気になる…
+  use 'yuki-yano/fern-preview.vim'
 
   use 'kyazdani42/nvim-web-devicons'
 
@@ -73,8 +74,10 @@ packer.startup(function(use)
   use 'haringsrob/nvim_context_vt'
 
   use 'kevinhwang91/nvim-hlslens'
+
   use 'lukas-reineke/indent-blankline.nvim'
   use 'numToStr/Comment.nvim'
+
   use 'norcalli/nvim-colorizer.lua'
 
   use 'simeji/winresizer'
@@ -100,13 +103,9 @@ packer.startup(function(use)
   use 'lewis6991/gitsigns.nvim'
 
   -- terminal Integration
-
   use {
       "akinsho/toggleterm.nvim",
       tag = '*',
-      config = function()
-          require("toggleterm").setup()
-      end
   }
 
 end)
