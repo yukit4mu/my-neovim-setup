@@ -70,6 +70,7 @@ packer.startup(function(use)
   -- Coding Support
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
+  use 'haringsrob/nvim_context_vt'
 
   use 'kevinhwang91/nvim-hlslens'
   use 'lukas-reineke/indent-blankline.nvim'
@@ -77,11 +78,16 @@ packer.startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
 
   use 'simeji/winresizer'
+
   use({
     "kylechui/nvim-surround",
     tag = "*",
   })
 
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
   -- Rust Integration
   use 'rust-lang/rust.vim'
 
@@ -92,5 +98,15 @@ packer.startup(function(use)
   -- use 'dinhhuy258/git.nvim'
   use 'tpope/vim-fugitive'
   use 'lewis6991/gitsigns.nvim'
+
+  -- terminal Integration
+
+  use {
+      "akinsho/toggleterm.nvim",
+      tag = '*',
+      config = function()
+          require("toggleterm").setup()
+      end
+  }
 
 end)
