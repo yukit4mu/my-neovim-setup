@@ -1,5 +1,5 @@
 vim.cmd([[
-let g:fern#renderer = "nerdfont"
+let g:fern#renderer = "nvim-web-devicons"
 let g:fern#default_hidden=1
 
 augroup my-glyph-palette

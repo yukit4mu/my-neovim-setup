@@ -45,10 +45,10 @@ packer.startup(function(use)
 
   -- Fern.vim
   use 'lambdalisue/fern.vim'
-  use 'lambdalisue/nerdfont.vim'
-  use 'lambdalisue/fern-renderer-nerdfont.vim'
+  -- use 'lambdalisue/nerdfont.vim'
+  -- use 'lambdalisue/fern-renderer-nerdfont.vim'
   use 'lambdalisue/glyph-palette.vim'
-  -- use 'TheLeoP/fern-renderer-web-devicons.nvim'
+  use 'TheLeoP/fern-renderer-web-devicons.nvim'
 
   use 'kyazdani42/nvim-web-devicons'
 
