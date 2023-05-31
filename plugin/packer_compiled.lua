@@ -110,11 +110,6 @@ _G.packer_plugins = {
     path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/everforest",
     url = "https://github.com/sainnhe/everforest"
   },
-  ["fern-preview.vim"] = {
-    loaded = true,
-    path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/fern-preview.vim",
-    url = "https://github.com/yuki-yano/fern-preview.vim"
-  },
   ["fern-renderer-nerdfont.vim"] = {
     loaded = true,
     path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/fern-renderer-nerdfont.vim",
@@ -124,6 +119,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/fern.vim",
     url = "https://github.com/lambdalisue/fern.vim"
+  },
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
   },
   ["gitsigns.nvim"] = {
     loaded = true,

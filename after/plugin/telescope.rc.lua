@@ -8,7 +8,7 @@ telescope.setup({
     sorting_strategy = "ascending",
     -- winblend = 4, -- everforestを透明にしているためオフにしておく
     layout_strategy = 'vertical',
-    layout_config = { height = 0.9 },
+    layout_config = { height = 0.8 },
     file_ignore_patterns = {
       "^.git/",
       "^node_modules/",

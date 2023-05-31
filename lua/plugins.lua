@@ -22,6 +22,7 @@ packer.startup(function(use)
   use 'rose-pine/neovim'
   use 'sainnhe/everforest'
   use 'AlexvZyl/nordic.nvim'
+  use 'projekt0n/github-nvim-theme'
   use 'folke/lsp-colors.nvim'
 
   -- dashboard
@@ -49,7 +50,6 @@ packer.startup(function(use)
   use 'lambdalisue/fern-renderer-nerdfont.vim'
   use 'lambdalisue/glyph-palette.vim'
   -- use 'TheLeoP/fern-renderer-web-devicons.nvim' -- こっちでレンダリングするとiconと文字の空白が気になる…
-  use 'yuki-yano/fern-preview.vim'
 
   use 'kyazdani42/nvim-web-devicons'
 

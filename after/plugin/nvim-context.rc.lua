@@ -4,6 +4,6 @@ if (not status) then return end
 context_nvim.setup({
   -- Enable by default. You can disable and use :NvimContextVtToggle to maually enable.
   -- Default: true
-  enabled = true,
+  enabled = false,
 
 })
