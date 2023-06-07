@@ -1,60 +1,58 @@
-require('rose-pine').setup({
-	--- @usage 'auto'|'main'|'moon'|'dawn'
-	variant = 'moon',
-	--- @usage 'main'|'moon'|'dawn'
-	dark_variant = 'moon',
-	bold_vert_split = false,
-	dim_nc_background = false,
-	disable_background = true,
-	disable_float_background = true,
-	disable_italics = true,
-	--- @usage string hex value or named color from rosepinetheme.com/palette
-	groups = {
-		background = 'base',
-		background_nc = '_experimental_nc',
-		panel = 'surface',
-		panel_nc = 'base',
-		border = 'highlight_med',
-		comment = 'muted',
-		link = 'iris',
-		punctuation = 'subtle',
 
-		error = 'love',
-		hint = 'iris',
-		info = 'foam',
-		warn = 'gold',
+-- require('rose-pine').setup({
+-- 	--- @usage 'auto'|'main'|'moon'|'dawn'
+-- 	variant = 'moon',
+-- 	--- @usage 'main'|'moon'|'dawn'
+-- 	dark_variant = 'moon',
+-- 	bold_vert_split = false,
+-- 	dim_nc_background = false,
+-- 	disable_background = true,
+-- 	disable_float_background = true,
+-- 	disable_italics = true,
+-- 	--- @usage string hex value or named color from rosepinetheme.com/palette
+-- 	groups = {
+-- 		background = 'base',
+-- 		background_nc = '_experimental_nc',
+-- 		panel = 'surface',
+-- 		panel_nc = 'base',
+-- 		border = 'highlight_med',
+-- 		comment = 'muted',
+-- 		link = 'iris',
+-- 		punctuation = 'subtle',
 
-		headings = {
-			h1 = 'iris',
-			h2 = 'foam',
-			h3 = 'rose',
-			h4 = 'gold',
-			h5 = 'pine',
-			h6 = 'foam',
-		}
-		-- or set all headings at once
-		-- headings = 'subtle'
-	},
-	-- Change specific vim highlight groups
-	-- https://github.com/rose-pine/neovim/wiki/Recipes
-	highlight_groups = {
-		ColorColumn = { bg = 'rose' },
+-- 		error = 'love',
+-- 		hint = 'iris',
+-- 		info = 'foam',
+-- 		warn = 'gold',
 
-		-- Blend colours against the "base" background
-		CursorLine = { bg = 'foam', blend = 10 },
-		StatusLine = { fg = 'love', bg = 'love', blend = 10 },
-	}
-})
+-- 		headings = {
+-- 			h1 = 'iris',
+-- 			h2 = 'foam',
+-- 			h3 = 'rose',
+-- 			h4 = 'gold',
+-- 			h5 = 'pine',
+-- 			h6 = 'foam',
+-- 		}
+-- 		-- or set all headings at once
+-- 		-- headings = 'subtle'
+-- 	},
+-- 	-- Change specific vim highlight groups
+-- 	-- https://github.com/rose-pine/neovim/wiki/Recipes
+-- 	highlight_groups = {
+-- 		ColorColumn = { bg = 'rose' },
 
--- MEMO:
--- 背景は透明にする
--- Coc.nvimのwinblend類は0にする
--- Hover系の表示にはborder:trueで枠をつける
--- Set colorscheme after options
-vim.cmd('colorscheme rose-pine')
+-- 		-- Blend colours against the "base" background
+-- 		CursorLine = { bg = 'foam', blend = 10 },
+-- 		StatusLine = { fg = 'love', bg = 'love', blend = 10 },
+-- 	}
+-- })
 
-
-
+-- -- MEMO:
+-- -- 背景は透明にする
+-- -- Coc.nvimのwinblend類は0にする
+-- -- Hover系の表示にはborder:trueで枠をつける
+-- -- Set colorscheme after options
+-- vim.cmd('colorscheme rose-pine')
 
 
 -- Github
@@ -96,12 +94,11 @@ vim.cmd('colorscheme rose-pine')
 --   specs = {},
 --   groups = {},
 -- })
-
 -- vim.cmd('colorscheme github_dark')
 
 
---everforest vim.cmd([[
---
+--everforest 
+-- vim.cmd([[
 -- let g:everforest_enable_italic = 1
 -- let g:everforest_disable_italic_comment = 1 
 -- let g:everforest_background = 'dark'
@@ -165,3 +162,15 @@ vim.cmd('colorscheme rose-pine')
 -- vim.cmd.colorscheme 'nordic'
 -- --
 
+-- Nordfoxを設定
+require('nightfox').setup({
+  options = {
+		transparent = true,
+    styles = {
+			functions = "italic",
+      types = "italic",
+    }
+  }
+})
+
+vim.cmd("colorscheme nordfox")
