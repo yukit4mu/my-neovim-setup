@@ -6,7 +6,7 @@
 -- nnoremap <silent> <C-j> :WintabsPrevious<CR>
 -- ]])
 
--- Set barbar's options
+--Set barbar's options
 vim.g.barbar_auto_setup = false -- disable auto-setup
 require'barbar'.setup {
   -- WARN: do not copy everything below into your config!
@@ -42,7 +42,7 @@ require'barbar'.setup {
   highlight_alternate = false,
 
   -- Disable highlighting file icons in inactive buffers
-  highlight_inactive_file_icons = false,
+  highlight_inactive_file_icons = true,
 
   -- Enable highlighting visible buffers
   highlight_visible = true,
@@ -67,7 +67,7 @@ require'barbar'.setup {
       -- Requires `nvim-web-devicons` if `true`
       enabled = true,
     },
-    separator = {left = '▎', right = ''},
+    -- separator = {left = '▎', right = '▎'},
 
     -- Configure the icons on the bufferline when modified or pinned.
     -- Supports all the base icon options.
@@ -84,7 +84,7 @@ require'barbar'.setup {
 
   -- If true, new buffers will be inserted at the start/end of the list.
   -- Default is to insert after current buffer.
-  insert_at_end = false,
+  insert_at_end = true,
   insert_at_start = false,
 
   -- Sets the maximum padding width with which to surround each tab
@@ -94,7 +94,7 @@ require'barbar'.setup {
   minimum_padding = 1,
 
   -- Sets the maximum buffer name length.
-  maximum_length = 30,
+  maximum_length = 32,
 
   -- If set, the letters for each buffer in buffer-pick mode will be
   -- assigned based on their name. Otherwise or in case all letters are

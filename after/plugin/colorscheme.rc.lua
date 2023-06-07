@@ -1,44 +1,104 @@
--- Github
-require('github-theme').setup({
-  options = {
-    transparent = true,       -- Disable setting background
-    terminal_colors = true,    -- Set terminal colors (vim.g.terminal_color_*) used in `:terminal`
-    dim_inactive = false,      -- Non focused panes set to alternative background
-    module_default = true,     -- Default enable value for modules
-    styles = {                 -- Style to be applied to different syntax groups
-      comments = 'NONE',     -- Value is any valid attr-list value `:help attr-list`
-      functions = 'italic',
-      keywords = 'italic',
-      variables = 'NONE',
-      conditionals = 'NONE',
-      constants = 'NONE',
-      numbers = 'NONE',
-      operators = 'NONE',
-      strings = 'NONE',
-      types = 'NONE',
-    },
-    inverse = {                -- Inverse highlight for different types
-      match_paren = false,
-      visual = false,
-      search = false,
-    },
-    darken = {                 -- Darken floating windows and sidebar-like windows
-      floats = false,
-      sidebars = {
-        enable = true,
-        list = {},             -- Apply dark background to specific windows
-      },
-    },
-    modules = {                -- List of various plugins and additional options
-      -- ...
-    },
-  },
-  palettes = {},
-  specs = {},
-  groups = {},
+require('rose-pine').setup({
+	--- @usage 'auto'|'main'|'moon'|'dawn'
+	variant = 'moon',
+	--- @usage 'main'|'moon'|'dawn'
+	dark_variant = 'moon',
+	bold_vert_split = false,
+	dim_nc_background = false,
+	disable_background = true,
+	disable_float_background = true,
+	disable_italics = true,
+	--- @usage string hex value or named color from rosepinetheme.com/palette
+	groups = {
+		background = 'base',
+		background_nc = '_experimental_nc',
+		panel = 'surface',
+		panel_nc = 'base',
+		border = 'highlight_med',
+		comment = 'muted',
+		link = 'iris',
+		punctuation = 'subtle',
+
+		error = 'love',
+		hint = 'iris',
+		info = 'foam',
+		warn = 'gold',
+
+		headings = {
+			h1 = 'iris',
+			h2 = 'foam',
+			h3 = 'rose',
+			h4 = 'gold',
+			h5 = 'pine',
+			h6 = 'foam',
+		}
+		-- or set all headings at once
+		-- headings = 'subtle'
+	},
+	-- Change specific vim highlight groups
+	-- https://github.com/rose-pine/neovim/wiki/Recipes
+	highlight_groups = {
+		ColorColumn = { bg = 'rose' },
+
+		-- Blend colours against the "base" background
+		CursorLine = { bg = 'foam', blend = 10 },
+		StatusLine = { fg = 'love', bg = 'love', blend = 10 },
+	}
 })
 
-vim.cmd('colorscheme github_dark')
+-- MEMO:
+-- 背景は透明にする
+-- Coc.nvimのwinblend類は0にする
+-- Hover系の表示にはborder:trueで枠をつける
+-- Set colorscheme after options
+vim.cmd('colorscheme rose-pine')
+
+
+
+
+
+-- Github
+-- require('github-theme').setup({
+--   options = {
+--     transparent = true,       -- Disable setting background
+--     terminal_colors = true,    -- Set terminal colors (vim.g.terminal_color_*) used in `:terminal`
+--     dim_inactive = false,      -- Non focused panes set to alternative background
+--     module_default = true,     -- Default enable value for modules
+--     styles = {                 -- Style to be applied to different syntax groups
+--       comments = 'NONE',     -- Value is any valid attr-list value `:help attr-list`
+--       functions = 'italic',
+--       keywords = 'italic',
+--       variables = 'NONE',
+--       conditionals = 'NONE',
+--       constants = 'NONE',
+--       numbers = 'NONE',
+--       operators = 'NONE',
+--       strings = 'NONE',
+--       types = 'NONE',
+--     },
+--     inverse = {                -- Inverse highlight for different types
+--       match_paren = false,
+--       visual = false,
+--       search = false,
+--     },
+--     darken = {                 -- Darken floating windows and sidebar-like windows
+--       floats = false,
+--       sidebars = {
+--         enable = true,
+--         list = {},             -- Apply dark background to specific windows
+--       },
+--     },
+--     modules = {                -- List of various plugins and additional options
+--       -- ...
+--     },
+--   },
+--   palettes = {},
+--   specs = {},
+--   groups = {},
+-- })
+
+-- vim.cmd('colorscheme github_dark')
+
 
 --everforest vim.cmd([[
 --
@@ -103,5 +163,5 @@ vim.cmd('colorscheme github_dark')
 --     },
 -- }
 -- vim.cmd.colorscheme 'nordic'
---
+-- --
 

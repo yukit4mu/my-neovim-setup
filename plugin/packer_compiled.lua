@@ -165,6 +165,11 @@ _G.packer_plugins = {
     path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/nerdfont.vim",
     url = "https://github.com/lambdalisue/nerdfont.vim"
   },
+  ["nord.nvim"] = {
+    loaded = true,
+    path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/nord.nvim",
+    url = "https://github.com/shaunsingh/nord.nvim"
+  },
   ["nordic.nvim"] = {
     loaded = true,
     path = "/home/kadoma/.local/share/nvim/site/pack/packer/start/nordic.nvim",

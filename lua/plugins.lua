@@ -22,6 +22,7 @@ packer.startup(function(use)
   use 'rose-pine/neovim'
   use 'sainnhe/everforest'
   use 'AlexvZyl/nordic.nvim'
+  use 'shaunsingh/nord.nvim'
   use 'projekt0n/github-nvim-theme'
   use 'folke/lsp-colors.nvim'
 
