@@ -5,13 +5,23 @@ local builtin = require('telescope.builtin')
 
 telescope.setup({
   defaults = {
+    preview = {
+      -- 巨大なProjectで固まることがあるためtreesitterを無効に
+      -- @refer https://github.com/nvim-telescope/telescope.nvim/issues/1379
+   		treesitter = false,
+   	},
     sorting_strategy = "ascending",
     -- winblend = 4, -- everforestを透明にしているためオフにしておく
     layout_strategy = 'vertical',
     layout_config = { height = 0.8 },
+    -- 画像類を検索対象に含めない(検索が重くなる)
     file_ignore_patterns = {
       "^.git/",
       "^node_modules/",
+      "%.jpg",
+      "%.png",
+      "%.pdf",
+      "%.gif",
     },
   },
   extensions = {
