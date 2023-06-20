@@ -17,11 +17,11 @@ packer.startup(function(use)
   -- use 'vim-jp/vimdoc-ja'
 
   -- colorscheme
-  use { "catppuccin/nvim", as = "catppuccin" }
-  use 'ishan9299/nvim-solarized-lua'
+  -- use { "catppuccin/nvim", as = "catppuccin" }
+  -- use 'ishan9299/nvim-solarized-lua'
   -- use 'rose-pine/neovim'
-  use 'sainnhe/everforest'
-  use 'AlexvZyl/nordic.nvim'
+  -- use 'sainnhe/everforest'
+  -- use 'AlexvZyl/nordic.nvim'
   use "EdenEast/nightfox.nvim"
 
   use 'folke/lsp-colors.nvim'
@@ -59,7 +59,8 @@ packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
-  use 'digitaltoad/vim-pug'
+  use 'JoosepAlviste/nvim-ts-context-commentstring' -- context-comment with treesitter
+  use 'digitaltoad/vim-pug' -- for .jade,.pug file syntax
 
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
@@ -72,9 +73,10 @@ packer.startup(function(use)
   -- Coding Support
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
-  use 'haringsrob/nvim_context_vt'
+  -- use 'haringsrob/nvim_context_vt'
 
   use 'kevinhwang91/nvim-hlslens'
+  use 'haya14busa/vim-asterisk'
 
   use 'lukas-reineke/indent-blankline.nvim'
   use 'numToStr/Comment.nvim'
@@ -88,10 +90,10 @@ packer.startup(function(use)
     tag = "*",
   })
 
-  use({
-      "iamcco/markdown-preview.nvim",
-      run = function() vim.fn["mkdp#util#install"]() end,
-  })
+  -- use({
+  --     "iamcco/markdown-preview.nvim",
+  --     run = function() vim.fn["mkdp#util#install"]() end,
+  -- })
   -- Rust Integration
   use 'rust-lang/rust.vim'
 

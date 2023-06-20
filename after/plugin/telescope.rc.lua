@@ -19,6 +19,7 @@ telescope.setup({
       "^.git/",
       "^node_modules/",
       "%.jpg",
+      "%.jpeg",
       "%.png",
       "%.pdf",
       "%.gif",
