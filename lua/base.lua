@@ -58,10 +58,14 @@ local keymap = vim.keymap
 keymap.set('n', 'ss', ':split<Return><C-w>w')
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
 -- アクティブウィンドウの移動
-keymap.set('', 'sh', '<C-w>h')
-keymap.set('', 'sk', '<C-w>k')
-keymap.set('', 'sj', '<C-w>j')
-keymap.set('', 'sl', '<C-w>l')
+keymap.set('n', 'sh', '<C-w>h')
+keymap.set('n', 'sk', '<C-w>k')
+keymap.set('n', 'sj', '<C-w>j')
+keymap.set('n', 'sl', '<C-w>l')
+
+-- 折返し時に論理行ではなく物理行で移動する
+keymap.set('n','j','gj')
+keymap.set('n','k','gk')
 
 -- Emacs風
 keymap.set('i', '<C-f>', '<Right>')
