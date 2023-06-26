@@ -1,115 +1,117 @@
-local status, packer = pcall(require, "packer")
-if (not status) then
-  print("Packer is not installed")
-  return
-end
+--Packer.nvim用のファイル
 
-vim.cmd [[packadd packer.nvim]]
+-- local status, packer = pcall(require, "packer")
+-- if (not status) then
+--   print("Packer is not installed")
+--   return
+-- end
 
-packer.startup(function(use)
+-- vim.cmd [[packadd packer.nvim]]
 
-  -- Plugin Manager
-  use 'wbthomason/packer.nvim'
+-- packer.startup(function(use)
 
-  -- Common Plugin(Lua)
-  use 'antoinemadec/FixCursorHold.nvim'
-  use 'nvim-lua/plenary.nvim'
-  -- use 'vim-jp/vimdoc-ja'
+--   -- Plugin Manager
+--   use 'wbthomason/packer.nvim'
 
-  -- colorscheme
-  -- use { "catppuccin/nvim", as = "catppuccin" }
-  -- use 'ishan9299/nvim-solarized-lua'
-  -- use 'rose-pine/neovim'
-  -- use 'sainnhe/everforest'
-  -- use 'AlexvZyl/nordic.nvim'
-  use "EdenEast/nightfox.nvim"
+--   -- Common Plugin(Lua)
+--   use 'antoinemadec/FixCursorHold.nvim'
+--   use 'nvim-lua/plenary.nvim'
+--   -- use 'vim-jp/vimdoc-ja'
 
-  use 'folke/lsp-colors.nvim'
+--   -- colorscheme
+--   -- use { "catppuccin/nvim", as = "catppuccin" }
+--   -- use 'ishan9299/nvim-solarized-lua'
+--   -- use 'rose-pine/neovim'
+--   -- use 'sainnhe/everforest'
+--   -- use 'AlexvZyl/nordic.nvim'
+--   use "EdenEast/nightfox.nvim"
 
-  -- dashboard
-  use {
-      'goolord/alpha-nvim',
-      requires = { 'nvim-tree/nvim-web-devicons' },
-      config = function ()
-          require'alpha'.setup(require'alpha.themes.startify'.config)
-      end
-  }
-  -- coc.nvim
-  use {'neoclide/coc.nvim', branch = 'release'}
+--   use 'folke/lsp-colors.nvim'
 
-  -- Statusline
-  use 'nvim-lualine/lualine.nvim'
+--   -- dashboard
+--   use {
+--       'goolord/alpha-nvim',
+--       requires = { 'nvim-tree/nvim-web-devicons' },
+--       config = function ()
+--           require'alpha'.setup(require'alpha.themes.startify'.config)
+--       end
+--   }
+--   -- coc.nvim
+--   use {'neoclide/coc.nvim', branch = 'release'}
 
-  -- Buffer Control
-  -- use 'zefei/vim-wintabs'
-  -- use 'zefei/vim-wintabs-powerline'
-  use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+--   -- Statusline
+--   use 'nvim-lualine/lualine.nvim'
 
-  -- Fern.vim
-  use 'lambdalisue/fern.vim'
-  -- use 'lambdalisue/nerdfont.vim'
-  -- use 'lambdalisue/fern-renderer-nerdfont.vim' -- これでレンダリングするとアイコンのサイズが変？
-  use 'lambdalisue/glyph-palette.vim'
-  use 'TheLeoP/fern-renderer-web-devicons.nvim' 
+--   -- Buffer Control
+--   -- use 'zefei/vim-wintabs'
+--   -- use 'zefei/vim-wintabs-powerline'
+--   use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 
-  use 'kyazdani42/nvim-web-devicons'
+--   -- Fern.vim
+--   use 'lambdalisue/fern.vim'
+--   -- use 'lambdalisue/nerdfont.vim'
+--   -- use 'lambdalisue/fern-renderer-nerdfont.vim' -- これでレンダリングするとアイコンのサイズが変？
+--   use 'lambdalisue/glyph-palette.vim'
+--   use 'TheLeoP/fern-renderer-web-devicons.nvim' 
 
-  --Syntax Highlight
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-  }
-  use 'JoosepAlviste/nvim-ts-context-commentstring' -- context-comment with treesitter
-  use 'digitaltoad/vim-pug' -- for .jade,.pug file syntax
+--   use 'kyazdani42/nvim-web-devicons'
 
-  -- Telescope
-  use 'nvim-telescope/telescope.nvim'
-  use {
-    "nvim-telescope/telescope-frecency.nvim",
-    requires = {"kkharji/sqlite.lua"}
-  }
-  use 'fannheyward/telescope-coc.nvim'
+--   --Syntax Highlight
+--   use {
+--     'nvim-treesitter/nvim-treesitter',
+--     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+--   }
+--   use 'JoosepAlviste/nvim-ts-context-commentstring' -- context-comment with treesitter
+--   use 'digitaltoad/vim-pug' -- for .jade,.pug file syntax
 
-  -- Coding Support
-  use 'windwp/nvim-autopairs'
-  use 'windwp/nvim-ts-autotag'
-  -- use 'haringsrob/nvim_context_vt'
+--   -- Telescope
+--   use 'nvim-telescope/telescope.nvim'
+--   use {
+--     "nvim-telescope/telescope-frecency.nvim",
+--     requires = {"kkharji/sqlite.lua"}
+--   }
+--   use 'fannheyward/telescope-coc.nvim'
 
-  use 'kevinhwang91/nvim-hlslens'
-  use 'haya14busa/vim-asterisk'
+--   -- Coding Support
+--   use 'windwp/nvim-autopairs'
+--   use 'windwp/nvim-ts-autotag'
+--   -- use 'haringsrob/nvim_context_vt'
 
-  use 'lukas-reineke/indent-blankline.nvim'
-  use 'numToStr/Comment.nvim'
+--   use 'kevinhwang91/nvim-hlslens'
+--   use 'haya14busa/vim-asterisk'
 
-  use 'norcalli/nvim-colorizer.lua'
+--   use 'lukas-reineke/indent-blankline.nvim'
+--   use 'numToStr/Comment.nvim'
 
-  use 'simeji/winresizer'
+--   use 'norcalli/nvim-colorizer.lua'
 
-  use({
-    "kylechui/nvim-surround",
-    tag = "*",
-  })
+--   use 'simeji/winresizer'
 
-  -- use({
-  --     "iamcco/markdown-preview.nvim",
-  --     run = function() vim.fn["mkdp#util#install"]() end,
-  -- })
-  -- Rust Integration
-  use 'rust-lang/rust.vim'
+--   use({
+--     "kylechui/nvim-surround",
+--     tag = "*",
+--   })
 
-  -- For using Prettier
-  use 'prettier/vim-prettier'
+--   -- use({
+--   --     "iamcco/markdown-preview.nvim",
+--   --     run = function() vim.fn["mkdp#util#install"]() end,
+--   -- })
+--   -- Rust Integration
+--   use 'rust-lang/rust.vim'
 
-  -- Git Integration
-  -- use 'dinhhuy258/git.nvim'
-  use 'tpope/vim-fugitive'
-  use 'lewis6991/gitsigns.nvim'
-  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+--   -- For using Prettier
+--   use 'prettier/vim-prettier'
 
-  -- terminal Integration
-  use {
-      "akinsho/toggleterm.nvim",
-      tag = '*',
-  }
+--   -- Git Integration
+--   -- use 'dinhhuy258/git.nvim'
+--   use 'tpope/vim-fugitive'
+--   use 'lewis6991/gitsigns.nvim'
+--   use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 
-end)
+--   -- terminal Integration
+--   use {
+--       "akinsho/toggleterm.nvim",
+--       tag = '*',
+--   }
+
+-- end)

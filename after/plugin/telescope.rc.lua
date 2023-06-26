@@ -12,8 +12,8 @@ telescope.setup({
    	},
     sorting_strategy = "ascending",
     -- winblend = 4, -- everforestを透明にしているためオフにしておく
-    layout_strategy = 'vertical',
-    layout_config = { height = 0.8 },
+    -- layout_strategy = 'vertical',
+    layout_config = { height = 0.9 },
     -- 画像類を検索対象に含めない(検索が重くなる)
     file_ignore_patterns = {
       "^.git/",
@@ -23,7 +23,9 @@ telescope.setup({
       "%.png",
       "%.pdf",
       "%.gif",
+      "%.svg",
     },
+    wrap_results = true, -- 検索結果を折り返す
   },
   extensions = {
     coc = {
