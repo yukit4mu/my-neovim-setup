@@ -71,7 +71,17 @@ require('jetpack.packer').startup(function(use)
   use 'windwp/nvim-ts-autotag'
   -- use 'haringsrob/nvim_context_vt'
 
-  use 'kevinhwang91/nvim-hlslens'
+  use 'petertriho/nvim-scrollbar'
+  use {
+    "kevinhwang91/nvim-hlslens",
+    config = function()
+      -- require('hlslens').setup() is not required
+      require("scrollbar.handlers.search").setup({
+          -- hlslens config overrides
+      })
+    end,
+  }
+
   use 'haya14busa/vim-asterisk'
 
   use 'lukas-reineke/indent-blankline.nvim'
@@ -85,10 +95,10 @@ require('jetpack.packer').startup(function(use)
     "kylechui/nvim-surround",
   })
 
-  -- use({
-  --     "iamcco/markdown-preview.nvim",
-  --     run = function() vim.fn["mkdp#util#install"]() end,
-  -- })
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
 
   -- Rust Integration
   use 'rust-lang/rust.vim'
@@ -104,7 +114,7 @@ require('jetpack.packer').startup(function(use)
 
   -- terminal Integration
   use {
-      "akinsho/toggleterm.nvim",
+      'akinsho/toggleterm.nvim',
   }
 end)
 

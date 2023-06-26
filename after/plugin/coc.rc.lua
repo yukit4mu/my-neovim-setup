@@ -1,4 +1,3 @@
-
 -- Some servers have issues with backup files, see #649
 vim.opt.writebackup = false
 
@@ -19,8 +18,6 @@ function _G.check_back_space()
   return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
 end
 
--- MEMO：suggest.autotrigger:"trigger"にしているため、<TAB>で補完が起動する
--- "auto"にしていると、日本語入力中に保管されて入力中の文字が見えないことがある…
 -- Use Tab for trigger completion with characters ahead and navigate
 local opts = { silent = true, noremap = true, expr = true, replace_keycodes = false }
 
@@ -135,4 +132,6 @@ keyset("n", "<leader>nn", ":Format<cr>", { silent = true })
 
 
 -- Daily Use Coc-Extensions
- vim.g.coc_global_extensions = {'coc-html','coc-emmet','coc-json','coc-css','coc-yaml','coc-yank','coc-vimlsp','coc-tsserver','coc-eslint','coc-rust-analyzer','coc-lua','@yaegassy/coc-tailwindcss3','@yaegassy/coc-astro','coc-clangd'}
+vim.g.coc_global_extensions = { 'coc-html', 'coc-emmet', 'coc-json', 'coc-css', 'coc-yaml', 'coc-yank', 'coc-vimlsp',
+  'coc-tsserver', 'coc-eslint', 'coc-rust-analyzer', 'coc-lua', '@yaegassy/coc-tailwindcss3', '@yaegassy/coc-astro',
+  'coc-clangd', 'coc-docker' }

@@ -2,7 +2,7 @@ local status,hls = pcall(require,"hlslens")
 if (not status) then return end
 
 require('hlslens').setup({
-    calm_down = true,
+    calm_down = false,
     nearest_only = false,
 })
 
