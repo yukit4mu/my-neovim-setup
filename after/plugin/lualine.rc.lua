@@ -1,12 +1,12 @@
 local status,lualine = pcall(require, "lualine")
 if (not status) then return end
 
-vim.cmd("colorscheme nordfox")
+-- vim.cmd("colorscheme nordfox")
 
 require('lualine').setup {
-  -- options ={
-  --   -- theme = "rose-pine"
-  -- },
+  options ={
+    theme = "everforest"
+  },
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff'},

@@ -1,4 +1,18 @@
 
+-- everforest 
+vim.cmd([[
+let g:everforest_enable_italic = 1
+let g:everforest_disable_italic_comment = 1 
+let g:everforest_background = 'medium'
+let g:everforest_diagnostic_text_highlight = 0
+let g:everforest_diagnostic_virtual_text = 'colored'
+let g:everforest_better_performance = 1
+
+let g:everforest_transparent_background = 1
+
+colorscheme everforest
+]])
+
 -- require('rose-pine').setup({
 -- 	--- @usage 'auto'|'main'|'moon'|'dawn'
 -- 	variant = 'moon',
@@ -97,17 +111,6 @@
 -- vim.cmd('colorscheme github_dark')
 
 
---everforest 
--- vim.cmd([[
--- let g:everforest_enable_italic = 1
--- let g:everforest_disable_italic_comment = 1 
--- let g:everforest_background = 'dark'
--- let g:everforest_diagnostic_text_highlight = 0
--- let g:everforest_better_performance = 1
--- let g:everforest_transparent_background = 1
--- colorscheme everforest
---
--- ]])
 
 -- require 'nordic' .setup {
 --     -- Available themes: 'nordic', 'onedark'.
@@ -163,14 +166,14 @@
 -- --
 
 -- Nordfoxを設定
-require('nightfox').setup({
-  options = {
-		transparent = true,
-    styles = {
-			functions = "italic",
-      types = "italic",
-    }
-  }
-})
+-- require('nightfox').setup({
+--   options = {
+-- 		transparent = true,
+--     styles = {
+-- 			functions = "italic",
+--       types = "italic",
+--     }
+--   }
+-- })
 
-vim.cmd("colorscheme nordfox")
+-- vim.cmd("colorscheme nordfox")

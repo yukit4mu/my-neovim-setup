@@ -2,7 +2,7 @@ local status,indent = pcall(require,"indent_blankline")
 if (not status) then return end
 
 vim.cmd([[
-let g:indent_blankline_char = '│'
+let g:indent_blankline_char = '┊'
 ]])
 -- -- それぞれの深さでインデントラインの色とスペース/タブを入れたときのListCharsの色を指定
 -- vim.cmd [[highlight IndentBlanklineChar guifg=#493759 gui=nocombine]]

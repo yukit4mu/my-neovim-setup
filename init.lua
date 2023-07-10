@@ -10,28 +10,18 @@ require('jetpack.packer').startup(function(use)
   -- Common Plugin(Lua)
   use 'antoinemadec/FixCursorHold.nvim'
   use 'nvim-lua/plenary.nvim'
-  -- use 'vim-jp/vimdoc-ja'
+  use 'folke/lsp-colors.nvim'
 
   -- colorscheme
   -- use { "catppuccin/nvim", as = "catppuccin" }
   -- use 'ishan9299/nvim-solarized-lua'
   -- use 'rose-pine/neovim'
-  -- use 'sainnhe/everforest'
   -- use 'AlexvZyl/nordic.nvim'
-  use "EdenEast/nightfox.nvim"
+  -- use "EdenEast/nightfox.nvim"
+  use 'sainnhe/everforest'
 
-  use 'folke/lsp-colors.nvim'
-
-  -- dashboard
-  use {
-      'goolord/alpha-nvim',
-      requires = { 'nvim-tree/nvim-web-devicons' },
-      config = function ()
-          require'alpha'.setup(require'alpha.themes.startify'.config)
-      end
-  }
   -- coc.nvim
-  use {'neoclide/coc.nvim', branch = 'release'}
+  use {'neoclide/coc.nvim', branch = 'release', event = { "VimEnter" }}
 
   -- Statusline
   use 'nvim-lualine/lualine.nvim'
@@ -42,9 +32,9 @@ require('jetpack.packer').startup(function(use)
   use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 
   -- Fern.vim
-  use 'lambdalisue/fern.vim'
   -- use 'lambdalisue/nerdfont.vim'
   -- use 'lambdalisue/fern-renderer-nerdfont.vim' -- これでレンダリングするとアイコンのサイズが変？
+  use 'lambdalisue/fern.vim'
   use 'lambdalisue/glyph-palette.vim'
   use 'TheLeoP/fern-renderer-web-devicons.nvim' 
 
@@ -55,23 +45,24 @@ require('jetpack.packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
-  use 'JoosepAlviste/nvim-ts-context-commentstring' -- context-comment with treesitter
-  use 'digitaltoad/vim-pug' -- for .jade,.pug file syntax
+
+  use {'JoosepAlviste/nvim-ts-context-commentstring'} -- context-comment with treesitter
+  use {'digitaltoad/vim-pug', event = { "VimEnter" }} -- for .jade,.pug file syntax
 
   -- Telescope
-  use 'nvim-telescope/telescope.nvim'
-  use {
-    "nvim-telescope/telescope-frecency.nvim",
-    requires = {"kkharji/sqlite.lua"}
-  }
+  use {'nvim-telescope/telescope.nvim' }
   use 'fannheyward/telescope-coc.nvim'
+  -- use {
+  --   "nvim-telescope/telescope-frecency.nvim",
+  --   requires = {"kkharji/sqlite.lua"}
+  -- }
 
   -- Coding Support
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
   -- use 'haringsrob/nvim_context_vt'
 
-  use 'petertriho/nvim-scrollbar'
+  use {'petertriho/nvim-scrollbar'}
   use {
     "kevinhwang91/nvim-hlslens",
     config = function()
@@ -82,39 +73,35 @@ require('jetpack.packer').startup(function(use)
     end,
   }
 
-  use 'haya14busa/vim-asterisk'
+  use {'haya14busa/vim-asterisk',}
+  use {'lukas-reineke/indent-blankline.nvim' }
+  use {'numToStr/Comment.nvim' }
+  use {'norcalli/nvim-colorizer.lua', }
+  use {"kylechui/nvim-surround"}
 
-  use 'lukas-reineke/indent-blankline.nvim'
-  use 'numToStr/Comment.nvim'
+  use {'simeji/winresizer' }
 
-  use 'norcalli/nvim-colorizer.lua'
-
-  use 'simeji/winresizer'
-
-  use({
-    "kylechui/nvim-surround",
-  })
 
   use({
-      "iamcco/markdown-preview.nvim",
+      "iamcco/markdown-preview.nvim", 
       run = function() vim.fn["mkdp#util#install"]() end,
   })
 
   -- Rust Integration
-  use 'rust-lang/rust.vim'
+  -- use 'rust-lang/rust.vim'
 
   -- For using Prettier
-  use 'prettier/vim-prettier'
+  use {'prettier/vim-prettier',event = { "VimEnter" }}
 
   -- Git Integration
   -- use 'dinhhuy258/git.nvim'
-  use 'tpope/vim-fugitive'
+  use {'tpope/vim-fugitive' ,event = { "VimEnter" }}
   use 'lewis6991/gitsigns.nvim'
-  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+  -- use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+  
+  -- use 'github/copilot.vim'
 
   -- terminal Integration
-  use {
-      'akinsho/toggleterm.nvim',
-  }
+  use { 'akinsho/toggleterm.nvim'}
 end)
 
