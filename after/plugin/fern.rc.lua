@@ -1,7 +1,9 @@
-vim.cmd([[
-let g:fern#renderer = "nvim-web-devicons"
-let g:fern#default_hidden=1
 
+vim.g["fern#renderer"] = "nvim-web-devicons"
+
+vim.g["fern#default_hidden"]= 1
+
+vim.cmd([[
 augroup my-glyph-palette
   autocmd! *
   autocmd FileType fern call glyph_palette#apply()

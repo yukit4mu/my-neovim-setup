@@ -5,7 +5,8 @@ if (not status) then return end
 
 require('lualine').setup {
   options ={
-    theme = "everforest"
+    theme = "everforest",
+		globalstatus = true,
   },
   sections = {
     lualine_a = {'mode'},
