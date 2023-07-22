@@ -140,10 +140,10 @@ scroll.setup({
     },
     handlers = {
         cursor = true,
-        diagnostic = true,
+        diagnostic = false,
         gitsigns = false, -- Requires gitsigns
         handle = true,
-        search = true, -- Requires hlslens
+        search = false, -- Requires hlslens
         ale = false, -- Requires ALE
     },
 })

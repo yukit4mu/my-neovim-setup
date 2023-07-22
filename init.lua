@@ -61,17 +61,18 @@ require("lazy").setup({
  -- Telescope
   {'nvim-telescope/telescope.nvim' },
   {'fannheyward/telescope-coc.nvim'},
- --  {
- --   "nvim-telescope/telescope-frecency.nvim",
- --   requires = {"kkharji/sqlite.lua"}
- -- }
+  {
+   "nvim-telescope/telescope-frecency.nvim",
+   dependencies = {"kkharji/sqlite.lua"}
+  },
 
  -- Coding Support
   'windwp/nvim-autopairs',
   'windwp/nvim-ts-autotag',
  --  'haringsrob/nvim_context_vt'
 
- --  {'petertriho/nvim-scrollbar'}
+  {'petertriho/nvim-scrollbar'},
+
  --  {
  --   "kevinhwang91/nvim-hlslens",
  -- } 有効にすると異様に重くなる…
@@ -83,6 +84,16 @@ require("lazy").setup({
   {"kylechui/nvim-surround"},
 
   {'simeji/winresizer' },
+
+  -- {
+  --   "tversteeg/registers.nvim",
+  --   name = "registers",
+  --   keys = {
+  --     { "\"",    mode = { "n", "v" } },
+  --     { "<C-R>", mode = "i" }
+  --   },
+  --   cmd = "Registers",
+  -- },
 
   {
     "iamcco/markdown-preview.nvim", 
