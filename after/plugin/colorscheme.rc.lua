@@ -1,17 +1,59 @@
 
--- everforest 
-vim.cmd([[
-let g:everforest_enable_italic = 1
-let g:everforest_disable_italic_comment = 1 
-let g:everforest_background = 'medium'
-let g:everforest_diagnostic_text_highlight = 0
-let g:everforest_diagnostic_virtual_text = 'colored'
-let g:everforest_better_performance = 1
+require('onenord').setup({
+  theme = dark, -- "dark" or "light". Alternatively, remove the option and set vim.o.background instead
+  borders = true, -- Split window borders
+  fade_nc = false, -- Fade non-current windows, making them more distinguishable
+  -- Style that is applied to various groups: see `highlight-args` for options
+  styles = {
+    comments = "NONE",
+    strings = "NONE",
+    keywords = "NONE",
+    functions = "italic",
+    variables = "NONE",
+    diagnostics = "underline",
+  },
+  disable = {
+    background = true, -- Disable setting the background color
+    cursorline = false, -- Disable the cursorline
+    eob_lines = true, -- Hide the end-of-buffer lines
+  },
+  -- Inverse highlight for different groups
+  inverse = {
+    match_paren = false,
+  },
+  custom_highlights = {}, -- Overwrite default highlight groups
+  custom_colors = {}, -- Overwrite default colors
+})
 
-let g:everforest_transparent_background = 1
 
-colorscheme everforest
-]])
+
+
+-- -- everforest 
+-- vim.cmd([[
+-- let g:everforest_enable_italic = 1
+-- let g:everforest_disable_italic_comment = 1 
+-- let g:everforest_background = 'medium'
+-- let g:everforest_diagnostic_text_highlight = 0
+-- let g:everforest_diagnostic_virtual_text = 'colored'
+-- let g:everforest_better_performance = 1
+
+-- let g:everforest_transparent_background = 1
+
+-- colorscheme everforest
+
+-- ]])
+
+-- vim.g.solarized_italics = 0
+-- vim.g.solarized_visibility = 'low'
+-- vim.g.solarized_termtrans = 1
+-- vim.g.solarized_diffmode = 'low'
+-- vim.g.solarized_statusline = 'normal'
+-- vim.cmd('colorscheme solarized')
+
+-- require('neosolarized').setup({
+--     comment_italics = false,
+--     background_set = false,
+-- })
 
 -- require('rose-pine').setup({
 -- 	--- @usage 'auto'|'main'|'moon'|'dawn'
@@ -123,7 +165,7 @@ colorscheme everforest
 --     -- Enable general editor background transparency.
 --     transparent_bg = true,
 --     -- Enable brighter float border.
---     bright_border = true,
+--     bright_border = false,
 --     -- Nordic specific options.
 --     -- Set all to false to use original Nord colors.
 --     -- Adjusts some colors to make the theme a bit nicer (imo).
@@ -137,7 +179,7 @@ colorscheme everforest
 --     -- WIP.
 --     onedark = {
 --         -- Brighten the whites to fit the theme better.
---         brighter_whites = true,
+--         brighter_whites = false,
 --     },
 --     -- Override the styling of any highlight group.
 --     override = {},

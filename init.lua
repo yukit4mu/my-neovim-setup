@@ -23,15 +23,18 @@ require("lazy").setup({
   'antoinemadec/FixCursorHold.nvim',
   'nvim-lua/plenary.nvim',
   'folke/lsp-colors.nvim',
-  'kyazdani42/nvim-web-devicons',
+  'nvim-tree/nvim-web-devicons',
+  -- {'tjdevries/colorbuddy.nvim',lazy = false, priority = 1500},
 
  -- colorscheme
  --  { "catppuccin/nvim", as = "catppuccin" }
- --  'ishan9299/nvim-solarized-lua'
+  -- 'ishan9299/nvim-solarized-lua',
+  -- {'svrana/neosolarized.nvim',lazy = false},
  --  'rose-pine/neovim'
- --  'AlexvZyl/nordic.nvim'
+  -- 'AlexvZyl/nordic.nvim',
  --  "EdenEast/nightfox.nvim"
 
+  {'rmehri01/onenord.nvim',lazy = false, priority = 1500},
   {'sainnhe/everforest',lazy = false, priority = 1500 },
 
  -- coc.nvim
@@ -41,21 +44,22 @@ require("lazy").setup({
   {'nvim-lualine/lualine.nvim'},
 
  -- Buffer Control
- -- use 'zefei/vim-wintabs'
- -- use 'zefei/vim-wintabs-powerline'
+  -- 'zefei/vim-wintabs',
+  -- 'zefei/vim-wintabs-powerline',
   {'romgrk/barbar.nvim',dependencies = { 'nvim-web-devicons' }},
 
  -- Fern.vim
  -- use 'lambdalisue/nerdfont.vim'
  -- use 'lambdalisue/fern-renderer-nerdfont.vim' -- これでレンダリングするとアイコンのサイズが変？
+
   {'lambdalisue/fern.vim',lazy = false, priority = 1000 }, --遅延読み込みをオフにして優先度を上げないとnvim-web-deviconsが読み込めない
   'lambdalisue/glyph-palette.vim',
   {'TheLeoP/fern-renderer-web-devicons.nvim',dependencies = {'nvim-web-devicons'}}, 
 
  --Syntax Highlight
   {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
-
   {'JoosepAlviste/nvim-ts-context-commentstring'}, -- context-comment with treesitter
+
   {'digitaltoad/vim-pug'}, -- for .jade,.pug file syntax
 
  -- Telescope
@@ -72,7 +76,6 @@ require("lazy").setup({
  --  'haringsrob/nvim_context_vt'
 
   {'petertriho/nvim-scrollbar'},
-
  --  {
  --   "kevinhwang91/nvim-hlslens",
  -- } 有効にすると異様に重くなる…
@@ -85,20 +88,12 @@ require("lazy").setup({
 
   {'simeji/winresizer' },
 
-  -- {
-  --   "tversteeg/registers.nvim",
-  --   name = "registers",
-  --   keys = {
-  --     { "\"",    mode = { "n", "v" } },
-  --     { "<C-R>", mode = "i" }
-  --   },
-  --   cmd = "Registers",
-  -- },
-
-  {
-    "iamcco/markdown-preview.nvim", 
-    build = function() vim.fn["mkdp#util#install"]() end,
-  },
+{ 
+  "iamcco/markdown-preview.nvim",
+  build = "cd app && npm install",
+  setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+  ft = { "markdown" }, 
+},
 
  -- Rust Integration
  -- use 'rust-lang/rust.vim'

@@ -5,12 +5,12 @@ if (not status) then return end
 
 require('lualine').setup {
   options ={
-    theme = "everforest",
+    theme = "onenord",
 		globalstatus = true,
   },
   sections = {
     lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff'},
+    lualine_b = {'branch'}, -- diffは必要ない気がするので削除
     lualine_c = {'filename'},
     lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
