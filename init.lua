@@ -107,7 +107,7 @@ require("lazy").setup({
   {'lewis6991/gitsigns.nvim'},
  --  { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
  
- --  'github/copilot.vim'
+  {'github/copilot.vim'},
 
  -- terminal Integration
   { 'akinsho/toggleterm.nvim'},
