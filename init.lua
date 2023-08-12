@@ -35,7 +35,7 @@ require("lazy").setup({
  --  "EdenEast/nightfox.nvim"
 
   {'rmehri01/onenord.nvim',lazy = false, priority = 1500},
-  {'sainnhe/everforest',lazy = false, priority = 1500 },
+  -- {'sainnhe/everforest',lazy = false, priority = 1500 },
 
  -- coc.nvim
   {'neoclide/coc.nvim', branch = 'release'},
