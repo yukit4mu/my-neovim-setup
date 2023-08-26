@@ -34,7 +34,7 @@ telescope.setup({
   },
 })
 
--- telescope.load_extension("frecency") --frecency search
+telescope.load_extension("frecency") --frecency search
 telescope.load_extension("coc")      -- coc integration
 
 -- file search
@@ -64,12 +64,23 @@ vim.keymap.set('n', '<leader>b',
     })
   end)
 
+-- git branches picker
+vim.keymap.set('n', '<leader>gg',
+  function()
+    builtin.git_branches({
+      no_ignore = false,
+      hidden = true
+    })
+  end)
+
 ---- Telescope-coc
 --定義ジャンプ
 vim.keymap.set("n", "gd", "<cmd>Telescope coc definitions<cr>", { noremap = true, silent = true })
 -- 型定義ジャンプ
 vim.keymap.set("n", "gy", "<cmd>Telescope coc type_definitions<cr>", { noremap = true, silent = true })
 -- diagnostics
-vim.keymap.set("n", "<leader>a", "<cmd>Telescope coc diagnostics<cr>", {noremap = true, silent = true })
+vim.keymap.set("n", "<leader>ga", "<cmd>Telescope coc diagnostics<cr>", {noremap = true, silent = true })
+-- reference
+vim.keymap.set("n", "<leader>gr", "<cmd>Telescope coc references<cr>", {noremap = true, silent = true })
 --頻度検索
 vim.keymap.set("n", "<leader>l", "<Cmd>lua require('telescope').extensions.frecency.frecency()<CR>", {noremap = true, silent = true})

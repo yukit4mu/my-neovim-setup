@@ -122,7 +122,7 @@ vim.opt.statusline:prepend("%{coc#status()}%{get(b:,'coc_current_function','')}"
 -- Coc.nvimの組み込みFormatter
 -- Language Serverを用いたFormat
 vim.api.nvim_create_user_command("Format", "call CocAction('format')", {}) --コマンドを登録
-keyset("n", "<leader>nn", ":Format<cr>", { silent = true })
+keyset("n", "<leader>nn", ":Format<cr>", { silent = false })
 
 -- prettier(coc-prettier)
 -- MEMO:coc-prettierでグローバルのprettierを使おうとすると、毎回ポップアップがでてしまう

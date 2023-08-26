@@ -27,31 +27,10 @@
   "css.completion.completePropertyWithSemicolon":false,
   "scss.completion.completePropertyWithSemicolon":false,
   "yank.enableCompletion":false,
-  "suggest.completionItemKindLabels": {
-    "function": "\uf794",
-    "method": "\uf6a6",
-    "variable": "\uf71b",
-    "constant": "\uf8ff",
-    "struct": "\ufb44",
-    "class": "\uf0e8",
-    "interface": "\ufa52",
-    "text": "\ue612",
-    "enum": "\uf435",
-    "enumMember": "\uf02b",
-    "color": "\ue22b",
-    "property": "\ufab6",
-    "field": "\uf93d",
-    "unit": "\uf475",
-    "file": "\uf471",
-    "value": "\uf8a3",
-    "event": "\ufacd",
-    "folder": "\uf115",
-    "keyword": "\uf893",
-    "snippet": "\uf64d",
-    "operator": "\uf915",
-    "reference": "\uf87a",
-    "typeParameter": "\uf278",
-    "default": "\uf29c"
+  "Lua.format.enable": true,
+  "Lua.format.defaultConfig": {
+    "indent_style": "space",
+    "indent_size": "2"
   },
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/16.0.2/clangd_16.0.2/bin/clangd"
 }

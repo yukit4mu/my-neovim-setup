@@ -23,7 +23,7 @@ require("lazy").setup({
   'antoinemadec/FixCursorHold.nvim',
   'nvim-lua/plenary.nvim',
   'folke/lsp-colors.nvim',
-  'nvim-tree/nvim-web-devicons',
+  {'nvim-tree/nvim-web-devicons',lazy = false,priority = 1000},
   -- {'tjdevries/colorbuddy.nvim',lazy = false, priority = 1500},
 
  -- colorscheme
@@ -34,8 +34,8 @@ require("lazy").setup({
   -- 'AlexvZyl/nordic.nvim',
  --  "EdenEast/nightfox.nvim"
 
-  {'rmehri01/onenord.nvim',lazy = false, priority = 1500},
-  -- {'sainnhe/everforest',lazy = false, priority = 1500 },
+  -- {'rmehri01/onenord.nvim',lazy = false, priority = 1500},
+  {'sainnhe/everforest',lazy = false, priority = 1500 },
 
  -- coc.nvim
   {'neoclide/coc.nvim', branch = 'release'},
@@ -88,12 +88,12 @@ require("lazy").setup({
 
   {'simeji/winresizer' },
 
-{ 
+  { 
   "iamcco/markdown-preview.nvim",
   build = "cd app && npm install",
   setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
   ft = { "markdown" }, 
-},
+  },
 
  -- Rust Integration
  -- use 'rust-lang/rust.vim'

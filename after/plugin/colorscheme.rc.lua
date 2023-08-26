@@ -1,47 +1,47 @@
 
-require('onenord').setup({
-  theme = dark, -- "dark" or "light". Alternatively, remove the option and set vim.o.background instead
-  borders = true, -- Split window borders
-  fade_nc = false, -- Fade non-current windows, making them more distinguishable
-  -- Style that is applied to various groups: see `highlight-args` for options
-  styles = {
-    comments = "NONE",
-    strings = "NONE",
-    keywords = "NONE",
-    functions = "italic",
-    variables = "NONE",
-    diagnostics = "underline",
-  },
-  disable = {
-    background = true, -- Disable setting the background color
-    cursorline = false, -- Disable the cursorline
-    eob_lines = true, -- Hide the end-of-buffer lines
-  },
-  -- Inverse highlight for different groups
-  inverse = {
-    match_paren = false,
-  },
-  custom_highlights = {}, -- Overwrite default highlight groups
-  custom_colors = {}, -- Overwrite default colors
-})
+-- require('onenord').setup({
+--   theme = 'dark', -- "dark" or "light". Alternatively, remove the option and set vim.o.background instead
+--   borders = true, -- Split window borders
+--   fade_nc = false, -- Fade non-current windows, making them more distinguishable
+--   -- Style that is applied to various groups: see `highlight-args` for options
+--   styles = {
+--     comments = "italic",
+--     strings = "NONE",
+--     keywords = "NONE",
+--     functions = "italic",
+--     variables = "NONE",
+--     diagnostics = "underline",
+--   },
+--   disable = {
+--     background = true, -- Disable setting the background color
+--     cursorline = false, -- Disable the cursorline
+--     eob_lines = true, -- Hide the end-of-buffer lines
+--   },
+--   -- Inverse highlight for different groups
+--   inverse = {
+--     match_paren = false,
+--   },
+--   custom_highlights = {}, -- Overwrite default highlight groups
+--   custom_colors = {}, -- Overwrite default colors
+-- })
 
 
 
 
 -- -- everforest 
--- vim.cmd([[
--- let g:everforest_enable_italic = 1
--- let g:everforest_disable_italic_comment = 1 
--- let g:everforest_background = 'medium'
--- let g:everforest_diagnostic_text_highlight = 0
--- let g:everforest_diagnostic_virtual_text = 'colored'
--- let g:everforest_better_performance = 1
+vim.cmd([[
+let g:everforest_enable_italic = 1
+let g:everforest_disable_italic_comment = 1 
+let g:everforest_background = 'medium'
+let g:everforest_diagnostic_text_highlight = 0
+let g:everforest_diagnostic_virtual_text = 'colored'
+let g:everforest_better_performance = 1
 
--- let g:everforest_transparent_background = 1
+let g:everforest_transparent_background = 1
 
--- colorscheme everforest
+colorscheme everforest
 
--- ]])
+]])
 
 -- vim.g.solarized_italics = 0
 -- vim.g.solarized_visibility = 'low'
