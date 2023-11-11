@@ -14,6 +14,8 @@ treesitter.setup {
 	},
   autotag = {
     enable = true,
+    -- nvim-ts-autotagで奇妙な挙動になるのでfalseに
+    enable_close_on_slash = false
   },
   context_commentstring = {
     enable = true,

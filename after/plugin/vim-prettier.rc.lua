@@ -1,3 +1,3 @@
 -- vim-prettier
-vim.keymap.set("n","<leader>mm","  :PrettierAsync<cr>")
-vim.keymap.set("v","<leader>mr","  :PrettierPartial<cr>")
+vim.keymap.set("n","zm","  :PrettierAsync<cr>")
+vim.keymap.set("v","zmr","  :PrettierPartial<cr>")

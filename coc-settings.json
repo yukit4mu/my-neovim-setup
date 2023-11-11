@@ -1,7 +1,7 @@
 {
   "coc.preferences.extensionUpdateCheck":"weekly",
   "suggest.autoTrigger": "always",
-  "suggest.minTriggerInputLength":3,
+  "suggest.minTriggerInputLength":2,
   "suggest.noselect":true,
   "suggest.floatConfig":{"border":false,"rounded":true,"winblend": 3},
   "diagnostic.floatConfig":{"border":true,"winblend": 7},
@@ -24,6 +24,9 @@
   "typescript.format.enable":false,
   "javascript.format.enable":false,
   "typescript.autoClosingTags":false,
+  "javascript.suggest.autoImports": true, 
+  "typescript.suggest.autoImports": true,
+  "html.autoClosingTags": false,
   "css.completion.completePropertyWithSemicolon":false,
   "scss.completion.completePropertyWithSemicolon":false,
   "yank.enableCompletion":false,

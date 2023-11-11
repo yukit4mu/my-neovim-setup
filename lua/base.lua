@@ -73,5 +73,8 @@ keymap.set('i', '<C-f>', '<Right>')
 -- jjでEscする
 keymap.set('i','jj','<Esc>')
 
+-- 保存のショートカット
+keymap.set('n','<C-t>',':w<CR>')
+
 -- 設定ファイルを開く
 keymap.set('n','<F1>',':edit $MYVIMRC<CR>')

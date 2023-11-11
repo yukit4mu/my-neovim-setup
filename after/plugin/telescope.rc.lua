@@ -36,6 +36,7 @@ telescope.setup({
 
 telescope.load_extension("frecency") --frecency search
 telescope.load_extension("coc")      -- coc integration
+telescope.load_extension("egrepify")
 
 -- file search
 vim.keymap.set('n', '<leader>f',

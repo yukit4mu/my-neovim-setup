@@ -29,7 +29,7 @@ keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
 
 -- Use <c-j> to trigger snippets
--- keyset("i", "<c-y>", "<Plug>(coc-snippets-expand-jump)")
+-- keyset("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)")
 -- Use <c-space> to trigger completion
 keyset("i", "<c-space>", "coc#refresh()", { silent = true, expr = true })
 
@@ -122,7 +122,7 @@ vim.opt.statusline:prepend("%{coc#status()}%{get(b:,'coc_current_function','')}"
 -- Coc.nvimの組み込みFormatter
 -- Language Serverを用いたFormat
 vim.api.nvim_create_user_command("Format", "call CocAction('format')", {}) --コマンドを登録
-keyset("n", "<leader>nn", ":Format<cr>", { silent = false })
+keyset("n", "zn", ":Format<cr>", { silent = false })
 
 -- prettier(coc-prettier)
 -- MEMO:coc-prettierでグローバルのprettierを使おうとすると、毎回ポップアップがでてしまう

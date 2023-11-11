@@ -19,7 +19,6 @@ require('base')
 require("lazy").setup({
 
  -- Common Plugin(Lua)
-
   'antoinemadec/FixCursorHold.nvim',
   'nvim-lua/plenary.nvim',
   'folke/lsp-colors.nvim',
@@ -39,9 +38,24 @@ require("lazy").setup({
 
  -- coc.nvim
   {'neoclide/coc.nvim', branch = 'release'},
+ -- coc-snipet用
+  {'mlaursen/vim-react-snippets'},
 
  -- Statusline
   {'nvim-lualine/lualine.nvim'},
+
+ -- UI mod
+  -- {
+  --   "folke/noice.nvim",
+  --   event = "VeryLazy",
+  --   opts = {
+  --   },
+  --   dependencies = {
+  --     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+  --     "MunifTanjim/nui.nvim",
+  --     "rcarriga/nvim-notify",
+  --     }
+  -- },
 
  -- Buffer Control
   -- 'zefei/vim-wintabs',
@@ -53,7 +67,7 @@ require("lazy").setup({
  -- use 'lambdalisue/fern-renderer-nerdfont.vim' -- これでレンダリングするとアイコンのサイズが変？
 
   {'lambdalisue/fern.vim',lazy = false, priority = 1000 }, --遅延読み込みをオフにして優先度を上げないとnvim-web-deviconsが読み込めない
-  'lambdalisue/glyph-palette.vim',
+  {'lambdalisue/glyph-palette.vim'},
   {'TheLeoP/fern-renderer-web-devicons.nvim',dependencies = {'nvim-web-devicons'}}, 
 
  --Syntax Highlight
@@ -69,16 +83,18 @@ require("lazy").setup({
    "nvim-telescope/telescope-frecency.nvim",
    dependencies = {"kkharji/sqlite.lua"}
   },
+  {
+    "fdschmidt93/telescope-egrepify.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+  },
 
  -- Coding Support
   'windwp/nvim-autopairs',
   'windwp/nvim-ts-autotag',
  --  'haringsrob/nvim_context_vt'
 
-  {'petertriho/nvim-scrollbar'},
- --  {
- --   "kevinhwang91/nvim-hlslens",
- -- } 有効にすると異様に重くなる…
+  -- {'petertriho/nvim-scrollbar'}, -- オンにすると巨大なファイルでかなり重くなる
+  {'kevinhwang91/nvim-hlslens'},
 
   {'haya14busa/vim-asterisk'},
   {'lukas-reineke/indent-blankline.nvim' },
@@ -111,7 +127,6 @@ require("lazy").setup({
 
  -- terminal Integration
   { 'akinsho/toggleterm.nvim'},
-
 
 })
 

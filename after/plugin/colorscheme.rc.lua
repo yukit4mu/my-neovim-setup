@@ -26,8 +26,6 @@
 -- })
 
 
-
-
 -- -- everforest 
 vim.cmd([[
 let g:everforest_enable_italic = 1
