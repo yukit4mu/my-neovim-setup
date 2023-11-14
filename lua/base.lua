@@ -54,7 +54,12 @@ vim.opt.list = false
 vim.g.mapleader = ','
 
 local keymap = vim.keymap
--- キーバインド
+
+-- 新規タブ
+keymap.set("n", "te", ":tabedit")
+keymap.set("n", "<tab>", ":tabnext<Return>", opts)
+keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+
 -- 画面分割
 keymap.set('n', 'ss', ':split<Return><C-w>w')
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w')

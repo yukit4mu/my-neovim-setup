@@ -45,6 +45,7 @@ require("lazy").setup({
   {'nvim-lualine/lualine.nvim'},
 
  -- UI mod
+ -- かっこいいけどnvim-notifyがちょっと鬱陶しいかも
   -- {
   --   "folke/noice.nvim",
   --   event = "VeryLazy",
@@ -58,8 +59,6 @@ require("lazy").setup({
   -- },
 
  -- Buffer Control
-  -- 'zefei/vim-wintabs',
-  -- 'zefei/vim-wintabs-powerline',
   {'romgrk/barbar.nvim',dependencies = { 'nvim-web-devicons' }},
 
  -- Fern.vim
@@ -81,7 +80,6 @@ require("lazy").setup({
   {'fannheyward/telescope-coc.nvim'},
   {
    "nvim-telescope/telescope-frecency.nvim",
-   dependencies = {"kkharji/sqlite.lua"}
   },
   {
     "fdschmidt93/telescope-egrepify.nvim",
@@ -97,18 +95,18 @@ require("lazy").setup({
   {'kevinhwang91/nvim-hlslens'},
 
   {'haya14busa/vim-asterisk'},
-  {'lukas-reineke/indent-blankline.nvim' },
+  {'lukas-reineke/indent-blankline.nvim', main = "ibl", opts = {} },
   {'numToStr/Comment.nvim' },
   {'norcalli/nvim-colorizer.lua' },
   {"kylechui/nvim-surround"},
 
   {'simeji/winresizer' },
 
-  { 
-  "iamcco/markdown-preview.nvim",
-  build = "cd app && npm install",
-  setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
-  ft = { "markdown" }, 
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
   },
 
  -- Rust Integration
@@ -118,7 +116,6 @@ require("lazy").setup({
   {'prettier/vim-prettier'},
 
  -- Git Integration
- -- use 'dinhhuy258/git.nvim'
   {'tpope/vim-fugitive'},
   {'lewis6991/gitsigns.nvim'},
  --  { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
