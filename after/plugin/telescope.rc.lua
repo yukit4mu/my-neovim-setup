@@ -57,9 +57,18 @@ vim.keymap.set('n', '<leader>r',
   end)
 
 -- buffer-fuzzy-find
-vim.keymap.set('n', '<leader>b',
+vim.keymap.set('n', '<leader>v',
   function()
     builtin.current_buffer_fuzzy_find({
+      no_ignore = false,
+      hidden = true
+    })
+  end)
+
+-- buffer-list
+vim.keymap.set('n', '<leader>b',
+  function()
+    builtin.buffers({
       no_ignore = false,
       hidden = true
     })

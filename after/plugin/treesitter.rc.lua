@@ -9,16 +9,14 @@ treesitter.setup {
     disable = {},
   },
 	indent ={
-		enable =true,
+    -- 一部のファイルでインデントが変になることがある
+    -- 一時的にインデントだけオフにして対応
+		enable = true,
     disable ={"html"},
 	},
   autotag = {
     enable = true,
     -- nvim-ts-autotagで奇妙な挙動になるのでfalseに
     enable_close_on_slash = false
-  },
-  context_commentstring = {
-    enable = true,
-    enable_autocmd = false,
   },
 }
