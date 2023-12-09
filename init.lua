@@ -19,20 +19,12 @@ require('base')
 require("lazy").setup({
 
  -- Common Plugin(Lua)
-  'antoinemadec/FixCursorHold.nvim',
   'nvim-lua/plenary.nvim',
-  'folke/lsp-colors.nvim',
+
   {'nvim-tree/nvim-web-devicons',lazy = false,priority = 1000},
-  -- {'tjdevries/colorbuddy.nvim',lazy = false, priority = 1500},
 
- -- colorscheme
  --  { "catppuccin/nvim", as = "catppuccin" }
-  -- 'ishan9299/nvim-solarized-lua',
-  -- {'svrana/neosolarized.nvim',lazy = false},
- --  'rose-pine/neovim'
-  -- 'AlexvZyl/nordic.nvim',
- --  "EdenEast/nightfox.nvim"
-
+  {'AlexvZyl/nordic.nvim'},
   -- {'rmehri01/onenord.nvim',lazy = false, priority = 1500},
   {'sainnhe/everforest',lazy = false, priority = 1500 },
 
@@ -44,34 +36,18 @@ require("lazy").setup({
  -- Statusline
   {'nvim-lualine/lualine.nvim'},
 
- -- UI mod
- -- かっこいいけどnvim-notifyがちょっと鬱陶しいかも
-  -- {
-  --   "folke/noice.nvim",
-  --   event = "VeryLazy",
-  --   opts = {
-  --   },
-  --   dependencies = {
-  --     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-  --     "MunifTanjim/nui.nvim",
-  --     "rcarriga/nvim-notify",
-  --     }
-  -- },
-
  -- Buffer Control
   {'romgrk/barbar.nvim',dependencies = { 'nvim-web-devicons' }},
-
- -- Fern.vim
- -- use 'lambdalisue/nerdfont.vim'
- -- use 'lambdalisue/fern-renderer-nerdfont.vim' -- これでレンダリングするとアイコンのサイズが変？
 
   {'lambdalisue/fern.vim',lazy = false, priority = 1000 }, --遅延読み込みをオフにして優先度を上げないとnvim-web-deviconsが読み込めない
   {'lambdalisue/glyph-palette.vim'},
   {'TheLeoP/fern-renderer-web-devicons.nvim',dependencies = {'nvim-web-devicons'}}, 
 
+
  --Syntax Highlight
   {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
   {'JoosepAlviste/nvim-ts-context-commentstring'}, -- context-comment with treesitter
+  {"yioneko/nvim-yati", version="*"},
 
   {'digitaltoad/vim-pug'}, -- for .jade,.pug file syntax
 
@@ -87,14 +63,14 @@ require("lazy").setup({
   },
 
  -- Coding Support
-  'windwp/nvim-autopairs',
-  'windwp/nvim-ts-autotag',
+  {'windwp/nvim-autopairs'},
+  {'windwp/nvim-ts-autotag'},
  --  'haringsrob/nvim_context_vt'
 
   -- {'petertriho/nvim-scrollbar'}, -- オンにすると巨大なファイルでかなり重くなる
   {'kevinhwang91/nvim-hlslens'},
-
   {'haya14busa/vim-asterisk'},
+  
   {'lukas-reineke/indent-blankline.nvim', main = "ibl", opts = {} },
   {'numToStr/Comment.nvim' },
   {'norcalli/nvim-colorizer.lua' },
@@ -118,7 +94,6 @@ require("lazy").setup({
  -- Git Integration
   {'tpope/vim-fugitive'},
   {'lewis6991/gitsigns.nvim'},
- --  { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
  
   {'github/copilot.vim'},
 
