@@ -14,7 +14,7 @@ require'barbar'.setup {
   --       The defaults are suitable for most people.
 
   -- Enable/disable animations
-  animation = false,
+  animation = true,
 
   -- Enable/disable auto-hiding the tab bar when there is a single buffer
   auto_hide = true, -- 合わせてshowtabline = 1 に設定しておく
@@ -42,10 +42,10 @@ require'barbar'.setup {
   highlight_alternate = false,
 
   -- Disable highlighting file icons in inactive buffers
-  highlight_inactive_file_icons = true,
+  highlight_inactive_file_icons = false,
 
   -- Enable highlighting visible buffers
-  highlight_visible = true,
+  highlight_visible = false,
 
   icons = {
     -- Configure the base icons on the bufferline.

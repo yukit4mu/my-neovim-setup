@@ -24,19 +24,29 @@ telescope.setup({
       "%.pdf",
       "%.gif",
       "%.svg",
+      "%.avif",
     },
     wrap_results = true, -- 検索結果を折り返す
   },
   extensions = {
     coc = {
       prefer_locations = false,   -- always use Telescope locations to preview definitions/declarations/implementations etc
-    },
-  },
+    }, 
+  --   file_browser = {
+  --     -- theme = "dropdown",
+  --     -- disables netrw and use telescope-file-browser in its place
+  --     grouped = true,
+  --     hijack_netrw = true,
+  --     display_stat = false,
+  --     git_status = false,
+  --     git_ignore = false,
+  -- },
+  }
 })
 
 telescope.load_extension("frecency") --frecency search
 telescope.load_extension("coc")      -- coc integration
-telescope.load_extension("egrepify")
+-- telescope.load_extension("file_browser")
 
 -- file search
 vim.keymap.set('n', '<leader>f',
@@ -94,3 +104,11 @@ vim.keymap.set("n", "<leader>ga", "<cmd>Telescope coc diagnostics<cr>", {noremap
 vim.keymap.set("n", "<leader>gr", "<cmd>Telescope coc references<cr>", {noremap = true, silent = true })
 --頻度検索
 vim.keymap.set("n", "<leader>l", "<Cmd>lua require('telescope').extensions.frecency.frecency()<CR>", {noremap = true, silent = true})
+
+-- open file_browser with the path of the current buffer
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<C-n>",
+--   ":Telescope file_browser path=%:p:h select_buffer=true previewer=false<CR>",
+--   { noremap = true }
+-- )

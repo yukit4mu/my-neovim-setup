@@ -23,10 +23,13 @@ require("lazy").setup({
 
   {'nvim-tree/nvim-web-devicons',lazy = false,priority = 1000},
 
- --  { "catppuccin/nvim", as = "catppuccin" }
-  {'AlexvZyl/nordic.nvim'},
-  -- {'rmehri01/onenord.nvim',lazy = false, priority = 1500},
-  {'sainnhe/everforest',lazy = false, priority = 1500 },
+  -- {'AlexvZyl/nordic.nvim'},
+  {
+    "neanias/everforest-nvim",
+    version = false,
+    lazy = false,
+    priority = 1000, -- make sure to load this before all the other start plugins
+  }, 
 
  -- coc.nvim
   {'neoclide/coc.nvim', branch = 'release'},
@@ -56,10 +59,6 @@ require("lazy").setup({
   {'fannheyward/telescope-coc.nvim'},
   {
    "nvim-telescope/telescope-frecency.nvim",
-  },
-  {
-    "fdschmidt93/telescope-egrepify.nvim",
-    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
   },
 
  -- Coding Support
