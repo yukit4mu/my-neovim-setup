@@ -94,10 +94,13 @@ require("lazy").setup({
   {'tpope/vim-fugitive'},
   {'lewis6991/gitsigns.nvim'},
  
-  {'github/copilot.vim'},
+  -- {'github/copilot.vim'},
 
  -- terminal Integration
   { 'akinsho/toggleterm.nvim'},
+
+ -- Document
+  { 'vim-jp/vimdoc-ja', lazy = false },
 
 })
 

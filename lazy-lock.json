@@ -31,5 +31,6 @@
   "vim-prettier": { "branch": "master", "commit": "7dbdbb12c50a9f4ba72390cce2846248e4368fd0" },
   "vim-pug": { "branch": "master", "commit": "ea39cd942cf3194230cf72bfb838901a5344d3b3" },
   "vim-react-snippets": { "branch": "main", "commit": "383abba5d6835eced72c89bbcdfa63295d803f88" },
+  "vimdoc-ja": { "branch": "master", "commit": "03aa4e4dcf8b91637cfb2b70373f36eba6bf84d9" },
   "winresizer": { "branch": "master", "commit": "9bd559a03ccec98a458e60c705547119eb5350f3" }
 }

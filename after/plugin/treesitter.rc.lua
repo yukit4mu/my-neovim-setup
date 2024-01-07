@@ -2,7 +2,7 @@ local status, treesitter = pcall(require, "nvim-treesitter.configs")
 if (not status) then return end
 
 treesitter.setup {
-  ensure_installed = {"c","cpp","vim","dockerfile","fish","typescript","tsx","javascript","json","lua","gitignore","bash","astro","markdown","css","scss","yaml","toml","vue","php","html"},
+  ensure_installed = {"c","cpp","vim","dockerfile","fish","typescript","tsx","javascript","json","lua","gitignore","bash","astro","markdown","css","scss","yaml","toml","vue","php","html","vimdoc"},
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false, -- catpuucin用
