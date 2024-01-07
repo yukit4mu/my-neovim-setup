@@ -2,7 +2,7 @@
   "coc.preferences.extensionUpdateCheck":"weekly",
   "suggest.autoTrigger": "always",
   "suggest.minTriggerInputLength":2,
-  "suggest.noselect":true,
+  "suggest.noselect":false,
   "suggest.floatConfig":{"border":false,"rounded":true,"winblend": 3},
   "diagnostic.floatConfig":{"border":true,"winblend": 7},
   "signature.floatConfig":{"winblend": 7},
@@ -29,6 +29,10 @@
   "html.autoClosingTags": false,
   "css.completion.completePropertyWithSemicolon":false,
   "scss.completion.completePropertyWithSemicolon":false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
   "yank.enableCompletion":false,
   "Lua.format.enable": true,
   "Lua.format.defaultConfig": {
