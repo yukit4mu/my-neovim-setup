@@ -13,10 +13,10 @@
   "diagnostic.virtualText":false,
   "diagnostic.virtualTextCurrentLineOnly":false,	
   "diagnostic.virtualTextLevel":"warning",
-  "diagnostic.virtualTextPrefix":"◆",
-  "diagnostic.warningSign":"◆",
+  "diagnostic.virtualTextPrefix":" ◆",
   "diagnostic.enableHighlightLineNumber":false,	
-  "typescript.showUnused":true,
+  "typescript.showUnused":false,
+  "javascript.showUnused":false,
   "typescript.showDeprecated":false,
   "javascript.showDeprecated":false, 
   "typescript.preferences.quoteStyle":"single",
@@ -29,10 +29,6 @@
   "html.autoClosingTags": false,
   "css.completion.completePropertyWithSemicolon":false,
   "scss.completion.completePropertyWithSemicolon":false,
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
-    "typescript": "typescriptreact"
-  },
   "yank.enableCompletion":false,
   "Lua.format.enable": true,
   "Lua.format.defaultConfig": {

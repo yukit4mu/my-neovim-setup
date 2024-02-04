@@ -8,10 +8,9 @@ telescope.setup({
     preview = {
       -- 巨大なProjectで固まることがあるためtreesitterを無効に
       -- @refer https://github.com/nvim-telescope/telescope.nvim/issues/1379
-   		treesitter = false,
+   		treesitter = true,
    	},
     sorting_strategy = "ascending",
-    -- winblend = 4, -- everforestを透明にしているためオフにしておく
     -- layout_strategy = 'vertical',
     layout_config = { height = 0.9 },
     -- 画像類を検索対象に含めない(検索が重くなる)
@@ -25,6 +24,7 @@ telescope.setup({
       "%.gif",
       "%.svg",
       "%.avif",
+      "%.gitkeep",
     },
     wrap_results = true, -- 検索結果を折り返す
   },

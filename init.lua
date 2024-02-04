@@ -18,18 +18,18 @@ require('base')
 --Plugin list
 require("lazy").setup({
 
- -- Common Plugin(Lua)
-  'nvim-lua/plenary.nvim',
-
-  {'nvim-tree/nvim-web-devicons',lazy = false,priority = 1000},
-
-  -- {'AlexvZyl/nordic.nvim'},
   {
     "neanias/everforest-nvim",
     version = false,
     lazy = false,
     priority = 1000, -- make sure to load this before all the other start plugins
   }, 
+
+ -- Common Plugin(Lua)
+  'nvim-lua/plenary.nvim',
+
+  {'nvim-tree/nvim-web-devicons',lazy = false,priority = 1000},
+
 
  -- coc.nvim
   {'neoclide/coc.nvim', branch = 'release'},
@@ -67,7 +67,7 @@ require("lazy").setup({
  --  'haringsrob/nvim_context_vt'
 
   -- {'petertriho/nvim-scrollbar'}, -- オンにすると巨大なファイルでかなり重くなる
-  {'kevinhwang91/nvim-hlslens'},
+  -- {'kevinhwang91/nvim-hlslens'},
   {'haya14busa/vim-asterisk'},
   
   {'lukas-reineke/indent-blankline.nvim', main = "ibl", opts = {} },
@@ -100,7 +100,11 @@ require("lazy").setup({
   { 'akinsho/toggleterm.nvim'},
 
  -- Document
-  { 'vim-jp/vimdoc-ja', lazy = false },
+  -- { 'vim-jp/vimdoc-ja', lazy = false },
 
+  {
+    'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
+  }
 })
 

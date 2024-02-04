@@ -7,7 +7,6 @@
 -- ]])
 
 --Set barbar's options
--- vim.g.barbar_auto_setup = false -- disable auto-setup
 require'barbar'.setup {
   -- WARN: do not copy everything below into your config!
   --       It is just an example of what configuration options there are.
@@ -121,5 +120,5 @@ local opts = { noremap = true, silent = true }
 map('n', '<C-j>', '<Cmd>BufferPrevious<CR>', opts)
 map('n', '<C-k>', '<Cmd>BufferNext<CR>', opts)
 -- Close buffer
-map('n', '<leader>e', '<Cmd>BufferClose<CR>', opts)
-map('n', '<leader>w', '<Cmd>BufferCloseAllButCurrent<CR>', opts)
+map('n', '<space>e', '<Cmd>BufferClose<CR>', opts)
+map('n', '<space>w', '<Cmd>BufferCloseAllButCurrent<CR>', opts)
