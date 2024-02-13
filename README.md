@@ -1,4 +1,4 @@
-# It's Yukit4mu's Neovim Config Wirtten in Lua 
+# It's Yukit4mu's Neovim Config Wirtten
 Actually, I recently decided to completely switch to nvim, so I haven't been able to use this configuration file...  
 In other words, this is like a memorandum. lol Therefore, as stated in the warning at the bottom, if you want to use the settings, please refer to the attached document and back your browser from this repository.
 <br>
