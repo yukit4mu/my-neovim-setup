@@ -20,7 +20,6 @@ Here's how to use this setting:
 ## Plugins
 This configuration file uses the following plugins.
 - Coc.nvim
-  - coc-extensions is included as a front main such as JS and TS, but you need to add it as appropriate.
 - nvim-treesitter
 - Everforest
 - Fern.vim
