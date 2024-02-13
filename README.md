@@ -1,4 +1,4 @@
-### It's Yukit4mu's Neovim Config Wirtten in Lua
+## It's Yukit4mu's Neovim Config Wirtten in Lua
 * * *
 
 :::note warn  
