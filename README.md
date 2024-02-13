@@ -1,21 +1,5 @@
-### Neovim Config Wirtten in Lua 🏜
+### It's Yukit4mu's Neovim Config Wirtten in Lua
 
-![neovim](./images/neovim.jpeg)
-
-This is Neovim-Config Repository for my personal use.  
-(Since 2023/3/9~)
-
-This Repository has three Branches.  
-- main
-  - Almost empty branch(only README.md exists)
-- coc
-  - Neovim Configs based on Coc.nvim.(my daily-use settings)
-- lsp
-  - Neovim Configs based on Neovim-Builtin LSP.
-
-You can choice favorite Branch(if you want to use)👐  
-
-`$ git clone git@github.com:Nyowa450/nvim.git`
-
-**This is my PERSONAL NEOVIM CONFIGS.**  
-**If you use this Configs (especially in practice), BE CAREFUL.🚨**
+This description has been changed as appropriate after cloning the following article and repository. Therefore, we strongly recommend that you read the attached article when using it as a reference.  
+- Article: https://zenn.dev/fukakusa_kadoma/articles/4d48fb4e67c945
+- Repository: https://github.com/Nyowa450/nvim/tree/coc
