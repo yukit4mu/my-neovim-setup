@@ -13,7 +13,7 @@ In other words, this is like a memorandum. lol Therefore, as stated in the warni
 ## How
 Here's how to use this setting:
 1. `$ cd ~/.config`
-2. `$ git clone`
+2. `$ git clone git@github.com:yukit4mu/my-neovim-setup.git`
 3. `$ nvim {file}`
 <br>
 
